@@ -75,13 +75,13 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                 # wrap them in Variable
 
                 img = Variable(data_dict["image"].cuda())
-                tissue_map = Variable(data_dict["tissue_map"].cuda()).unsqueeze(1)
-                nuclei_tissue_binary = Variable(data_dict["nuclei_tissue_map_res"].cuda()).unsqueeze(1)
+                tissue_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+                nuclei_tissue_binary = Variable(data_dict["nuclei_binary_map_res"].cuda()).unsqueeze(1)
                 nuclei_binary_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
                 nuclei_binary_res = Variable(data_dict["nuclei_binary_map_res"].cuda()).unsqueeze(1)
-                nuclei_type_map = Variable(data_dict["nuclei_type_map"].cuda()).unsqueeze(1)
-                nuclei_inst_map = Variable(data_dict["nuclei_inst_map"].cuda()).unsqueeze(1)
-                nuclei_hv_map = Variable(data_dict["nuclei_hv_map"].cuda())
+                nuclei_type_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+                nuclei_inst_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+                nuclei_hv_map = Variable(data_dict["nuclei_binary_map"].cuda())
 
 
                 if phase == 'train':
@@ -114,8 +114,8 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                     nuclei_type_map_pred = pred_mask_ins[:,1:1+args.ins_cls,:,:]
                     nuclei_hv_map_pred = pred_mask_ins[:,1+args.ins_cls:3+args.ins_cls,:,:]
 
-                    hv_loss1 = mse_loss(input=nuclei_hv_map_pred, target=nuclei_hv_map)
-                    hv_loss2 = msge_loss(input=nuclei_hv_map_pred, target=nuclei_hv_map, focus=nuclei_binary_map, device='cuda')
+                    hv_loss1 = torch.tensor(0.0).cuda()
+                    hv_loss2 = torch.tensor(0.0).cuda()
                     binary_loss = dice_ce_loss_b(nuclei_binary_map_pred, nuclei_binary_map)
                     multi_loss = dice_ce_loss_m(nuclei_type_map_pred, nuclei_type_map)
                     score_mask_ins_b = accuracy_metric(nuclei_binary_map_pred, nuclei_binary_map)
@@ -155,8 +155,8 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                         nuclei_type_map_pred = pred_mask_ins[:,1:1+args.ins_cls,:,:]
                         nuclei_hv_map_pred = pred_mask_ins[:,1+args.ins_cls:3+args.ins_cls,:,:]
                         
-                        hv_loss1 = mse_loss(input=nuclei_hv_map_pred, target=nuclei_hv_map)
-                        hv_loss2 = msge_loss(input=nuclei_hv_map_pred, target=nuclei_hv_map, focus=nuclei_binary_map, device='cuda')
+                        hv_loss1 = torch.tensor(0.0).cuda()
+                        hv_loss2 = torch.tensor(0.0).cuda()
                         binary_loss = dice_ce_loss_b(nuclei_binary_map_pred, nuclei_binary_map)
                         multi_loss = dice_ce_loss_m(nuclei_type_map_pred, nuclei_type_map)
                         score_mask_ins_b = accuracy_metric(nuclei_binary_map_pred, nuclei_binary_map)
@@ -211,7 +211,7 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                     if epoch_loss <= best_loss and epoch > 50:
                         best_loss = epoch_loss
                     best_model_wts = model.state_dict()
-                    #torch.save(best_model_wts, f'outputs/coseg_{args.dataset}_{epoch}.pth')
+                    torch.save(best_model_wts, f'outputs/coseg_{args.dataset}_latest.pth')
 
                 scheduler.step()
                 print(f"lr: {scheduler.get_last_lr()[0]}")

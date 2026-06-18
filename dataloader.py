@@ -3,6 +3,7 @@ from skimage import io, transform, color, img_as_ubyte
 import numpy as np
 from torch.utils.data import Dataset
 import cv2
+import nibabel as nib
 import torch
 import torchvision.transforms as pytorch_transforms
 import torch.nn.functional as F
@@ -124,47 +125,45 @@ class PUMALoader(Dataset):
         def __getitem__(self,idx):
             image_id = list(self.jsfiles[idx].split('.'))[0]
 
-            image_path = os.path.join(self.path,'image_1024/',image_id)
-            tissue_path = os.path.join(self.path,f'mask_tissue_1024_ori/',image_id)
-            nuclei_path = os.path.join(self.path,f'mask_nuclei3_1024/',image_id)
+            image_path = os.path.join(self.path, 'images_png', image_id + '.png')
+            mask_path = os.path.join(self.path, 'masks_npy', image_id + '.npy')
  
     
-            img = io.imread(image_path+'.png')[:,:,:3].astype('float32') 
-            nuclei_tissue_map = np.load(tissue_path+'_tissue.npy').astype(np.uint8)
-            nuclei_tissue_map = nuclei_tissue_map[0]
-            nuclei_tissue_binary = nuclei_tissue_map.copy().astype(np.uint8)
-            nuclei_tissue_binary[nuclei_tissue_binary > 0] = 1
-            nuclei_map = np.load(nuclei_path+'_nuclei.npy')
+            img = io.imread(image_path).astype('float32')
+
+            if len(img.shape) == 2:
+                img = np.stack([img]*3, axis=-1)
+            # nuclei_tissue_map = nuclei_tissue_map[0]
+            # nuclei_tissue_binary = nuclei_tissue_map.copy().astype(np.uint8)
+            # nuclei_tissue_binary[nuclei_tissue_binary > 0] = 1
+            nuclei_map = np.load(mask_path)
   
-            nuclei_binary_map = nuclei_map[0, :, :, 1].copy().astype(np.uint8)
+            nuclei_binary_map = (nuclei_map > 0).astype(np.uint8)
             nuclei_binary_map[nuclei_binary_map > 0] = 1
-            nuclei_type_map = nuclei_map[0, :, :, 1].copy().astype(np.uint8)
-            nuclei_inst_map = nuclei_map[0, :, :, 0].copy()
-            nuclei_hv_map = gen_instance_hv_map(nuclei_inst_map)
+            #nuclei_type_map = nuclei_map[0, :, :, 1].copy().astype(np.uint8)
+            #nuclei_inst_map = nuclei_map[0, :, :, 0].copy()
+            #nuclei_hv_map = gen_instance_hv_map(nuclei_inst_map)
 
             
-            data_group = self.transforms(image=img, mask=nuclei_tissue_binary, mask2=nuclei_type_map, mask3=nuclei_binary_map)
+            data_group = self.transforms(
+                image=img,
+                mask=nuclei_binary_map
+            )
+            
             img_re = data_group['image']
-            nuclei_tissue_map_res = data_group['mask']
-            nuclei_type_map_res = data_group['mask2']
-            nuclei_binary_map_res = data_group['mask3']
- 
+            nuclei_binary_map_res = data_group['mask']
+            
             img = self.img_tesnor(img)
             img = self.preprocess(img)
-
-            data_dict = {"image_id": image_id,
-                        "image": img,
-                        "image_res": img_re,
-                        "tissue_map": nuclei_tissue_map,
-                        "nuclei_binary_map": nuclei_binary_map,
-                        "nuclei_type_map": nuclei_type_map,
-                        "nuclei_inst_map": nuclei_inst_map,
-                        "nuclei_hv_map": nuclei_hv_map,
-                        "nuclei_tissue_map_res": nuclei_tissue_map_res,
-                        "nuclei_type_map_res": nuclei_type_map_res,
-                        "nuclei_binary_map_res": nuclei_binary_map_res
+            
+            data_dict = {
+                "image_id": image_id,
+                "image": img,
+                "image_res": img_re,
+                "nuclei_binary_map": nuclei_binary_map,
+                "nuclei_binary_map_res": nuclei_binary_map_res
             }
-
+            
             return data_dict
         
         def preprocess(self, x):
@@ -295,15 +294,15 @@ class GlasLoader(Dataset):
             gland_id = self.map_id[self.jsfiles[idx]]
             gland_id = list(gland_id.split('.'))[0]
 
-            image_path = os.path.join(self.path, 'nuclei','images',image_id)
-            tissue_path = os.path.join(self.path, 'gland','label',gland_id)
+            image_path = os.path.join(self.path, 'images',image_id)
+            tissue_path = os.path.join(self.path, 'label',gland_id)
             nuclei_path = os.path.join(self.path,'nuclei','npy',image_id)
  
     
-            img = io.imread(image_path+'.png')[:,:,:3].astype('float32') 
-            nuclei_tissue_map = cv2.imread(tissue_path+'_anno.png', 0)
+            img = nib.load(image_path + '.nii').get_fdata().astype('float32') 
+            nuclei_tissue_map = nib.load(tissue_path + '.nii.gz').get_fdata()
             nuclei_tissue_map[nuclei_tissue_map > 0] = 255
-            nuclei_map = np.load(nuclei_path+'.npy')
+            # nuclei_map = np.load(nuclei_path+'.npy')
   
             nuclei_binary_map = nuclei_map[:, :, 1].copy().astype(np.uint8)
             nuclei_binary_map[nuclei_binary_map > 0] = 255

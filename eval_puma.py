@@ -6,7 +6,7 @@ from dataloader import PUMALoader
 from skimage import measure, morphology
 import albumentations as A
 from albumentations.pytorch import ToTensor
-from pytorch_lightning.metrics import Accuracy, Precision, Recall, F1
+from torchmetrics import Accuracy, Precision, Recall, F1Score
 import argparse
 import time
 import pandas as pd
@@ -21,7 +21,7 @@ from typing import Any, Dict, List, Tuple
 from model import CoSeg
 from functools import partial
 from scipy import ndimage as ndi
-from monai.metrics import compute_hausdorff_distance, compute_percent_hausdorff_distance, HausdorffDistanceMetric
+from monai.metrics import compute_hausdorff_distance, HausdorffDistanceMetric
 from monai.metrics import DiceHelper, ConfusionMatrixMetric, get_confusion_matrix, compute_confusion_matrix_metric, MeanIoU
 from sam2.build_sam import build_sam2
 from monai.networks import one_hot
@@ -89,13 +89,13 @@ if __name__ == '__main__':
 
     idx = 0
     
-    TestAcc = Accuracy()
-    TestPrecision = Precision()
+    TestAcc = Accuracy(task="binary")
+    TestPrecision = Precision(task="binary")
     TestDiceB_tissue = DiceHelper(include_background=True)
     TestDiceM_tissue = DiceHelper(include_background=True, num_classes=args.sem_cls, softmax=True, get_not_nans=True, ignore_empty=False)
     TestDiceB_nuclei = DiceHelper(include_background=True)
     TestDiceM_nuclei = DiceHelper(include_background=True, num_classes=args.ins_cls, softmax=True, get_not_nans=True, ignore_empty=False)
-    TestRecall = Recall()
+    TestRecall = Recall(task="binary")
     TestF1 = ConfusionMatrixMetric(metric_name='f1 score')
     TestIoU = MeanIoU(get_not_nans=True, ignore_empty=False)
 
@@ -164,13 +164,13 @@ if __name__ == '__main__':
         for data_dict in tqdm(test_loader):
             
             img = Variable(data_dict["image"].cuda())
-            tissue_map = Variable(data_dict["tissue_map"].cuda()).unsqueeze(1)
-            nuclei_tissue_map_res = Variable(data_dict["nuclei_tissue_map_res"].cuda()).unsqueeze(1)
+            tissue_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+            nuclei_tissue_map_res = Variable(data_dict["nuclei_binary_map_res"].cuda()).unsqueeze(1)
             nuclei_binary_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
-            nuclei_type_map = Variable(data_dict["nuclei_type_map"].cuda()).unsqueeze(1)
-            nuclei_inst_map = Variable(data_dict["nuclei_inst_map"].cuda()).unsqueeze(1)
-            nuclei_hv_map = Variable(data_dict["nuclei_hv_map"].cuda())
-            nuclei_type_map_re = Variable(data_dict["nuclei_type_map_res"].cuda()).unsqueeze(1)
+            nuclei_type_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+            nuclei_inst_map = Variable(data_dict["nuclei_binary_map"].cuda()).unsqueeze(1)
+            nuclei_hv_map = Variable(data_dict["nuclei_binary_map"].cuda())
+            nuclei_type_map_re = Variable(data_dict["nuclei_binary_map_res"].cuda()).unsqueeze(1)
             img_id = data_dict["image_id"]
 
             torch.cuda.synchronize()
@@ -202,8 +202,8 @@ if __name__ == '__main__':
             predictions["num_nuclei_classes"] = args.ins_cls
             predictions["tissue_types"] = None
             batch_metrics = model.calculate_step_metric_validation(args.ins_cls, predictions, gt)
-            nuclei_binary_map_pred[nuclei_binary_map_pred >= 0.5] = 1
-            nuclei_binary_map_pred[nuclei_binary_map_pred < 0.5] = 0
+            nuclei_binary_map_pred[nuclei_binary_map_pred >= 0.1] = 1
+            nuclei_binary_map_pred[nuclei_binary_map_pred < 0.1] = 0
 
             color_sem = np.array([[255, 255, 255], [195, 135, 123], [127, 113, 229]])
             mask = np.zeros((1024, 1024, 3), dtype=np.uint8)
