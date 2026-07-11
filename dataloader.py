@@ -124,11 +124,18 @@ class PUMALoader(Dataset):
         
         def __getitem__(self,idx):
             image_id = list(self.jsfiles[idx].split('.'))[0]
+            print("image_id =", image_id)
+            print("self.jsfiles[idx] =", self.jsfiles[idx])
 
             image_path = os.path.join(self.path, 'images_png', image_id + '.png')
-            mask_path = os.path.join(self.path, 'masks_npy', image_id + '.npy')
+            mask_name = "0012203205_" + image_id.replace("la_", "label_") + ".npy"
+            mask_path = os.path.join("dataset", "mask_npy", mask_name)
  
-    
+            print("self.path =", self.path)
+            print("image_id =", image_id)
+            print("mask_path =", mask_path)
+
+
             img = io.imread(image_path).astype('float32')
 
             if len(img.shape) == 2:
