@@ -1,0 +1,8 @@
+{
+  "train": [],
+  "valid": [
+    "sample.png"
+  ],
+  "test": [],
+  "val": []
+}

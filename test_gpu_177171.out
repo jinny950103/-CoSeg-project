@@ -1,0 +1,15 @@
+===== CONDA ENV =====
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+coseg                *   /home/u9444861/.conda/envs/coseg
+base                     /work/envstack/apps/miniconda3/26.1.1
+
+===== PYTHON PATH =====
+/work/envstack/apps/miniconda3/26.1.1/bin/python
+===== GPU TEST =====
+torch: 2.13.0+cu130
+cuda: True
+gpu: NVIDIA H200

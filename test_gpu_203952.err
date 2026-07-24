@@ -1,0 +1,34 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 2.0.8 (you have 1.4.8). Upgrade using: pip install --upgrade albumentations
+
+  0%|          | 0/238 [00:00<?, ?it/s]
+  0%|          | 0/238 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 302, in <module>
+    train_model(model, optimizer, exp_lr_scheduler, num_epochs=args.epoch)
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 119, in train_model
+    binary_loss = dice_ce_loss_b(nuclei_binary_map_pred, nuclei_binary_map)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/monai/losses/dice.py", line 855, in forward
+    dice_loss = self.dice(input, target)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/monai/losses/dice.py", line 181, in forward
+    raise AssertionError(f"ground truth has different shape ({target.shape}) from input ({input.shape})")
+AssertionError: ground truth has different shape (torch.Size([2, 1, 256, 256])) from input (torch.Size([2, 1, 1024, 1024]))
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 25, in <module>
+    main()
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 17, in main
+    run(["python", "train_puma.py"])
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 6, in run
+    subprocess.run(cmd, check=True)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'train_puma.py']' returned non-zero exit status 1.
+ERROR conda.cli.main_run:execute(142): `conda run python run_pipeline.py` failed. (See above for error)
+ERROR conda.cli.main_run:execute(142): `conda run conda run -n coseg python run_pipeline.py` failed. (See above for error)

@@ -5,7 +5,7 @@ import torch.nn as nn
 from dataloader import PUMALoader
 from skimage import measure, morphology
 import albumentations as A
-from albumentations.pytorch import ToTensor
+from albumentations.pytorch import ToTensorV2
 from torchmetrics import Accuracy, Precision, Recall, F1Score
 import argparse
 import time
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     parser.add_argument('--jsonfile', default='data_split.json',type=str, help='')
     parser.add_argument('--size', type=int, default=1024, help='epoches')
     parser.add_argument('--model',default='pretrain/sam2_hiera_large.pt', type=str, help='')
-    parser.add_argument('--checkpoint',default='outputs/coseg_puma_39.pth', type=str, help='')
+    parser.add_argument('--checkpoint',default='outputs/coseg_puma_latest.pth', type=str, help='')
     parser.add_argument('--ins_cls', type=int, default=4, help='number of instance classes (including background)')
     parser.add_argument('--sem_cls', type=int, default=3, help='number of semantic classes (including background)')
     parser.add_argument('--output_dir', type=str, default='results', help='output directory')

@@ -7,7 +7,7 @@ import nibabel as nib
 import torch
 import torchvision.transforms as pytorch_transforms
 import torch.nn.functional as F
-from albumentations.pytorch.transforms import ToTensor 
+from albumentations.pytorch import ToTensorV2
 import albumentations as A
 from scipy.ndimage import center_of_mass, distance_transform_edt
 import json
@@ -127,9 +127,13 @@ class PUMALoader(Dataset):
             print("image_id =", image_id)
             print("self.jsfiles[idx] =", self.jsfiles[idx])
 
-            image_path = os.path.join(self.path, 'images_png', image_id + '.png')
-            mask_name = "0012203205_" + image_id.replace("la_", "label_") + ".npy"
-            mask_path = os.path.join("dataset", "mask_npy", mask_name)
+            #image_path = os.path.join(self.path, 'images_png', image_id + '.png')
+            #mask_name = "0012203205_" + image_id.replace("la_", "label_") + ".npy"
+            #mask_path = os.path.join("dataset", "mask_npy", mask_name)
+            image_path = os.path.join("data", "image_1024", self.jsfiles[idx])
+            mask_path = os.path.join("data", "mask_sem_1024", self.jsfiles[idx].replace(".png", ".npy"))
+            
+                                            
  
             print("self.path =", self.path)
             print("image_id =", image_id)
@@ -167,7 +171,7 @@ class PUMALoader(Dataset):
                 "image_id": image_id,
                 "image": img,
                 "image_res": img_re,
-                "nuclei_binary_map": nuclei_binary_map,
+                "nuclei_binary_map": nuclei_binary_map_res,
                 "nuclei_binary_map_res": nuclei_binary_map_res
             }
             

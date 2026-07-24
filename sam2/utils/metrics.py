@@ -35,6 +35,7 @@
 
 from typing import List
 import numpy as np
+import cv2
 from scipy.optimize import linear_sum_assignment
 
 
@@ -53,6 +54,10 @@ def get_fast_aji(true, pred):
     if pred.any() and not(true.any()):
         return 0.0
     # print(list(np.unique(true)))
+    if pred.ndim > 2:
+        pred = np.squeeze(pred)
+    if pred.shape != true.shape:
+        pred = cv2.resize(pred.astype(np.uint8), (true.shape[1], true.shape[0]), interpolation=cv2.INTER_NEAREST)
     true = np.copy(true)  # ? do we need this
     pred = np.copy(pred)
     true_id_list = list(np.unique(true))
@@ -161,6 +166,11 @@ def get_fast_pq(true, pred, match_iou=0.5):
 
     """
     assert match_iou >= 0.0, "Cant' be negative"
+
+    if pred.ndim > 2:
+        pred = np.squeeze(pred)
+    if pred.shape != true.shape:
+        pred = cv2.resize(pred.astype(np.uint8), (true.shape[1], true.shape[0]), interpolation=cv2.INTER_NEAREST)
 
     true = np.copy(true)
     pred = np.copy(pred)

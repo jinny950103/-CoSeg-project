@@ -1,0 +1,2825 @@
+===== CONDA ENV =====
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+coseg                    /home/u9444861/.conda/envs/coseg
+base                     /work/envstack/apps/miniconda3/26.1.1
+
+===== PYTHON PATH =====
+/home/u9444861/.conda/envs/coseg/bin/python
+===== GPU TEST =====
+Trainable Params = 22.178543M
+Total Params = 234.327839M
+Ratio = 9.464749512754222%
+Epoch 0/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 8.3728 Type: 2.1911 Binary: 1.1242 MSE: 0.0000 MSGE: 0.0000 Tissue: 1.0770
+train Tissue Stroma: 0.3974 Tumor: 0.0000 Avg: 0.1325
+train Instance Lymphocyte: 0.3836 Tumor: 0.0000 Other: 0.0000 Binary: 0.5739 Avg: 0.1279
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 6.8770 Type: 2.0922 Binary: 1.3524 MSE: 0.0000 MSGE: 0.0000 Tissue: 1.0574
+valid Tissue Stroma: 0.3127 Tumor: 0.0000 Avg: 0.1042
+valid Instance Lymphocyte: 0.3051 Tumor: 0.0000 Other: 0.0000 Binary: 0.3792 Avg: 0.1017
+lr: 9.8e-05
+
+Epoch 1/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 5.8722 Type: 2.0008 Binary: 1.0757 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9831
+train Tissue Stroma: 0.4563 Tumor: 0.0000 Avg: 0.1521
+train Instance Lymphocyte: 0.4273 Tumor: 0.0000 Other: 0.0000 Binary: 0.5925 Avg: 0.1424
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 6.9722 Type: 1.9545 Binary: 1.3807 MSE: 0.0000 MSGE: 0.0000 Tissue: 1.0119
+valid Tissue Stroma: 0.3424 Tumor: 0.0000 Avg: 0.1141
+valid Instance Lymphocyte: 0.3255 Tumor: 0.0000 Other: 0.0000 Binary: 0.3895 Avg: 0.1085
+lr: 9.604e-05
+
+Epoch 2/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 5.8133 Type: 1.8580 Binary: 1.0408 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9066
+train Tissue Stroma: 0.5153 Tumor: 0.0000 Avg: 0.1718
+train Instance Lymphocyte: 0.4669 Tumor: 0.0000 Other: 0.0000 Binary: 0.6133 Avg: 0.1556
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8558 Type: 1.8354 Binary: 1.4203 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9751
+valid Tissue Stroma: 0.3733 Tumor: 0.0000 Avg: 0.1244
+valid Instance Lymphocyte: 0.3528 Tumor: 0.0000 Other: 0.0000 Binary: 0.3998 Avg: 0.1176
+lr: 9.41192e-05
+
+Epoch 3/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 4.5873 Type: 1.7037 Binary: 0.9644 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8216
+train Tissue Stroma: 0.5963 Tumor: 0.0000 Avg: 0.1988
+train Instance Lymphocyte: 0.5354 Tumor: 0.0000 Other: 0.0000 Binary: 0.6594 Avg: 0.1785
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7300 Type: 1.7893 Binary: 1.4812 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9673
+valid Tissue Stroma: 0.4000 Tumor: 0.0000 Avg: 0.1333
+valid Instance Lymphocyte: 0.3830 Tumor: 0.0000 Other: 0.0000 Binary: 0.4106 Avg: 0.1277
+lr: 9.2236816e-05
+
+Epoch 4/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 4.3505 Type: 1.5848 Binary: 0.9837 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7859
+train Tissue Stroma: 0.6354 Tumor: 0.0000 Avg: 0.2118
+train Instance Lymphocyte: 0.5853 Tumor: 0.0000 Other: 0.0000 Binary: 0.6626 Avg: 0.1951
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8706 Type: 1.7828 Binary: 1.5612 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9719
+valid Tissue Stroma: 0.4170 Tumor: 0.0000 Avg: 0.1390
+valid Instance Lymphocyte: 0.4078 Tumor: 0.0000 Other: 0.0000 Binary: 0.4205 Avg: 0.1359
+lr: 9.039207968e-05
+
+Epoch 5/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 4.0350 Type: 1.4695 Binary: 0.9067 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7330
+train Tissue Stroma: 0.6924 Tumor: 0.0000 Avg: 0.2308
+train Instance Lymphocyte: 0.6537 Tumor: 0.0000 Other: 0.0000 Binary: 0.7093 Avg: 0.2179
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 6.0861 Type: 1.8067 Binary: 1.6572 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9660
+valid Tissue Stroma: 0.4245 Tumor: 0.0000 Avg: 0.1415
+valid Instance Lymphocyte: 0.4238 Tumor: 0.0000 Other: 0.0000 Binary: 0.4289 Avg: 0.1413
+lr: 8.858423808639999e-05
+
+Epoch 6/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.9556 Type: 1.4168 Binary: 0.9007 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7142
+train Tissue Stroma: 0.7062 Tumor: 0.0000 Avg: 0.2354
+train Instance Lymphocyte: 0.6903 Tumor: 0.0000 Other: 0.0000 Binary: 0.7295 Avg: 0.2301
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 6.2801 Type: 1.8285 Binary: 1.7547 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.9312
+valid Tissue Stroma: 0.4246 Tumor: 0.0000 Avg: 0.1415
+valid Instance Lymphocyte: 0.4321 Tumor: 0.0000 Other: 0.0000 Binary: 0.4352 Avg: 0.1440
+lr: 8.681255332467199e-05
+
+Epoch 7/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.9342 Type: 1.3920 Binary: 0.9071 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6995
+train Tissue Stroma: 0.7026 Tumor: 0.0000 Avg: 0.2342
+train Instance Lymphocyte: 0.7081 Tumor: 0.0000 Other: 0.0000 Binary: 0.7435 Avg: 0.2360
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 6.3081 Type: 1.7960 Binary: 1.7983 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8779
+valid Tissue Stroma: 0.4197 Tumor: 0.0000 Avg: 0.1399
+valid Instance Lymphocyte: 0.4336 Tumor: 0.0000 Other: 0.0000 Binary: 0.4381 Avg: 0.1445
+lr: 8.507630225817855e-05
+
+Epoch 8/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 4.1464 Type: 1.4067 Binary: 0.9974 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7072
+train Tissue Stroma: 0.6602 Tumor: 0.0000 Avg: 0.2201
+train Instance Lymphocyte: 0.6792 Tumor: 0.0000 Other: 0.0000 Binary: 0.7188 Avg: 0.2264
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.9812 Type: 1.6301 Binary: 1.7391 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8073
+valid Tissue Stroma: 0.4069 Tumor: 0.0000 Avg: 0.1356
+valid Instance Lymphocyte: 0.4215 Tumor: 0.0000 Other: 0.0000 Binary: 0.4365 Avg: 0.1405
+lr: 8.337477621301498e-05
+
+Epoch 9/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.9964 Type: 1.3869 Binary: 0.9363 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7005
+train Tissue Stroma: 0.6360 Tumor: 0.0000 Avg: 0.2120
+train Instance Lymphocyte: 0.6498 Tumor: 0.0000 Other: 0.0000 Binary: 0.7239 Avg: 0.2166
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6890 Type: 1.5431 Binary: 1.6351 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7843
+valid Tissue Stroma: 0.4030 Tumor: 0.0000 Avg: 0.1343
+valid Instance Lymphocyte: 0.4118 Tumor: 0.0000 Other: 0.0000 Binary: 0.4319 Avg: 0.1373
+lr: 8.170728068875468e-05
+
+Epoch 10/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9534 Type: 1.3816 Binary: 0.9251 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6955
+train Tissue Stroma: 0.6423 Tumor: 0.0000 Avg: 0.2141
+train Instance Lymphocyte: 0.6479 Tumor: 0.0000 Other: 0.0000 Binary: 0.7109 Avg: 0.2160
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6962 Type: 1.6483 Binary: 1.5686 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8308
+valid Tissue Stroma: 0.4180 Tumor: 0.0000 Avg: 0.1393
+valid Instance Lymphocyte: 0.4265 Tumor: 0.0000 Other: 0.0000 Binary: 0.4282 Avg: 0.1422
+lr: 8.007313507497958e-05
+
+Epoch 11/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 4.0362 Type: 1.3842 Binary: 0.9679 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6958
+train Tissue Stroma: 0.6613 Tumor: 0.0000 Avg: 0.2204
+train Instance Lymphocyte: 0.6668 Tumor: 0.0000 Other: 0.0000 Binary: 0.6830 Avg: 0.2223
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6582 Type: 1.7058 Binary: 1.5142 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8601
+valid Tissue Stroma: 0.4259 Tumor: 0.0000 Avg: 0.1420
+valid Instance Lymphocyte: 0.4327 Tumor: 0.0000 Other: 0.0000 Binary: 0.4245 Avg: 0.1442
+lr: 7.847167237347999e-05
+
+Epoch 12/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9328 Type: 1.3684 Binary: 0.9323 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6867
+train Tissue Stroma: 0.6896 Tumor: 0.0000 Avg: 0.2299
+train Instance Lymphocyte: 0.6932 Tumor: 0.0000 Other: 0.0000 Binary: 0.6895 Avg: 0.2311
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6622 Type: 1.7171 Binary: 1.5267 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8715
+valid Tissue Stroma: 0.4296 Tumor: 0.0000 Avg: 0.1432
+valid Instance Lymphocyte: 0.4340 Tumor: 0.0000 Other: 0.0000 Binary: 0.4269 Avg: 0.1447
+lr: 7.690223892601038e-05
+
+Epoch 13/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 4.0413 Type: 1.3901 Binary: 0.9657 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6972
+train Tissue Stroma: 0.6733 Tumor: 0.0000 Avg: 0.2244
+train Instance Lymphocyte: 0.6706 Tumor: 0.0000 Other: 0.0000 Binary: 0.6795 Avg: 0.2235
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4913 Type: 1.6024 Binary: 1.5406 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8249
+valid Tissue Stroma: 0.4228 Tumor: 0.0000 Avg: 0.1409
+valid Instance Lymphocyte: 0.4233 Tumor: 0.0000 Other: 0.0000 Binary: 0.4295 Avg: 0.1411
+lr: 7.536419414749018e-05
+
+Epoch 14/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.9982 Type: 1.3774 Binary: 0.9584 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6897
+train Tissue Stroma: 0.6582 Tumor: 0.0000 Avg: 0.2194
+train Instance Lymphocyte: 0.6522 Tumor: 0.0000 Other: 0.0000 Binary: 0.6885 Avg: 0.2174
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5050 Type: 1.5745 Binary: 1.5799 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7960
+valid Tissue Stroma: 0.4176 Tumor: 0.0000 Avg: 0.1392
+valid Instance Lymphocyte: 0.4198 Tumor: 0.0000 Other: 0.0000 Binary: 0.4336 Avg: 0.1399
+lr: 7.385691026454037e-05
+
+Epoch 15/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 4.0106 Type: 1.3800 Binary: 0.9634 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6906
+train Tissue Stroma: 0.6438 Tumor: 0.0000 Avg: 0.2146
+train Instance Lymphocyte: 0.6443 Tumor: 0.0000 Other: 0.0000 Binary: 0.6951 Avg: 0.2148
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5495 Type: 1.5865 Binary: 1.6060 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7866
+valid Tissue Stroma: 0.4163 Tumor: 0.0000 Avg: 0.1388
+valid Instance Lymphocyte: 0.4211 Tumor: 0.0000 Other: 0.0000 Binary: 0.4363 Avg: 0.1404
+lr: 7.237977205924956e-05
+
+Epoch 16/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.8438 Type: 1.3609 Binary: 0.8953 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6833
+train Tissue Stroma: 0.6622 Tumor: 0.0000 Avg: 0.2207
+train Instance Lymphocyte: 0.6711 Tumor: 0.0000 Other: 0.0000 Binary: 0.7240 Avg: 0.2237
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7265 Type: 1.6693 Binary: 1.6276 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8124
+valid Tissue Stroma: 0.4236 Tumor: 0.0000 Avg: 0.1412
+valid Instance Lymphocyte: 0.4295 Tumor: 0.0000 Other: 0.0000 Binary: 0.4383 Avg: 0.1432
+lr: 7.093217661806457e-05
+
+Epoch 17/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.8888 Type: 1.3588 Binary: 0.9215 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6807
+train Tissue Stroma: 0.6745 Tumor: 0.0000 Avg: 0.2248
+train Instance Lymphocyte: 0.6871 Tumor: 0.0000 Other: 0.0000 Binary: 0.7176 Avg: 0.2290
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8761 Type: 1.7441 Binary: 1.6368 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8546
+valid Tissue Stroma: 0.4323 Tumor: 0.0000 Avg: 0.1441
+valid Instance Lymphocyte: 0.4350 Tumor: 0.0000 Other: 0.0000 Binary: 0.4393 Avg: 0.1450
+lr: 6.951353308570328e-05
+
+Epoch 18/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 4.0142 Type: 1.3908 Binary: 0.9615 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6951
+train Tissue Stroma: 0.6848 Tumor: 0.0000 Avg: 0.2283
+train Instance Lymphocyte: 0.6910 Tumor: 0.0000 Other: 0.0000 Binary: 0.7080 Avg: 0.2303
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.9248 Type: 1.7451 Binary: 1.6370 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8787
+valid Tissue Stroma: 0.4363 Tumor: 0.0000 Avg: 0.1454
+valid Instance Lymphocyte: 0.4342 Tumor: 0.0000 Other: 0.0000 Binary: 0.4395 Avg: 0.1447
+lr: 6.812326242398921e-05
+
+Epoch 19/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.8967 Type: 1.3646 Binary: 0.9225 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6838
+train Tissue Stroma: 0.6969 Tumor: 0.0000 Avg: 0.2323
+train Instance Lymphocyte: 0.6899 Tumor: 0.0000 Other: 0.0000 Binary: 0.7171 Avg: 0.2300
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7080 Type: 1.6282 Binary: 1.5977 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8415
+valid Tissue Stroma: 0.4305 Tumor: 0.0000 Avg: 0.1435
+valid Instance Lymphocyte: 0.4233 Tumor: 0.0000 Other: 0.0000 Binary: 0.4373 Avg: 0.1411
+lr: 6.676079717550942e-05
+
+Epoch 20/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.9901 Type: 1.3743 Binary: 0.9614 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6896
+train Tissue Stroma: 0.6699 Tumor: 0.0000 Avg: 0.2233
+train Instance Lymphocyte: 0.6543 Tumor: 0.0000 Other: 0.0000 Binary: 0.6973 Avg: 0.2181
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5615 Type: 1.5694 Binary: 1.5676 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8073
+valid Tissue Stroma: 0.4236 Tumor: 0.0000 Avg: 0.1412
+valid Instance Lymphocyte: 0.4155 Tumor: 0.0000 Other: 0.0000 Binary: 0.4353 Avg: 0.1385
+lr: 6.542558123199923e-05
+
+Epoch 21/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9885 Type: 1.3768 Binary: 0.9603 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6884
+train Tissue Stroma: 0.6511 Tumor: 0.0000 Avg: 0.2170
+train Instance Lymphocyte: 0.6384 Tumor: 0.0000 Other: 0.0000 Binary: 0.6915 Avg: 0.2128
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4583 Type: 1.5600 Binary: 1.5391 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7811
+valid Tissue Stroma: 0.4170 Tumor: 0.0000 Avg: 0.1390
+valid Instance Lymphocyte: 0.4139 Tumor: 0.0000 Other: 0.0000 Binary: 0.4332 Avg: 0.1380
+lr: 6.411706960735925e-05
+
+Epoch 22/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.9824 Type: 1.3753 Binary: 0.9561 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6901
+train Tissue Stroma: 0.6374 Tumor: 0.0000 Avg: 0.2125
+train Instance Lymphocyte: 0.6401 Tumor: 0.0000 Other: 0.0000 Binary: 0.6873 Avg: 0.2134
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4409 Type: 1.5922 Binary: 1.5186 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7754
+valid Tissue Stroma: 0.4151 Tumor: 0.0000 Avg: 0.1384
+valid Instance Lymphocyte: 0.4185 Tumor: 0.0000 Other: 0.0000 Binary: 0.4316 Avg: 0.1395
+lr: 6.283472821521206e-05
+
+Epoch 23/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9911 Type: 1.3750 Binary: 0.9612 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6900
+train Tissue Stroma: 0.6386 Tumor: 0.0000 Avg: 0.2129
+train Instance Lymphocyte: 0.6535 Tumor: 0.0000 Other: 0.0000 Binary: 0.6831 Avg: 0.2178
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5077 Type: 1.6544 Binary: 1.5251 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7970
+valid Tissue Stroma: 0.4208 Tumor: 0.0000 Avg: 0.1403
+valid Instance Lymphocyte: 0.4256 Tumor: 0.0000 Other: 0.0000 Binary: 0.4324 Avg: 0.1419
+lr: 6.157803365090782e-05
+
+Epoch 24/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.9805 Type: 1.3727 Binary: 0.9559 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6870
+train Tissue Stroma: 0.6543 Tumor: 0.0000 Avg: 0.2181
+train Instance Lymphocyte: 0.6680 Tumor: 0.0000 Other: 0.0000 Binary: 0.6866 Avg: 0.2227
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5399 Type: 1.6668 Binary: 1.5381 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8194
+valid Tissue Stroma: 0.4257 Tumor: 0.0000 Avg: 0.1419
+valid Instance Lymphocyte: 0.4273 Tumor: 0.0000 Other: 0.0000 Binary: 0.4339 Avg: 0.1424
+lr: 6.0346472977889664e-05
+
+Epoch 25/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.9747 Type: 1.3724 Binary: 0.9542 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6871
+train Tissue Stroma: 0.6658 Tumor: 0.0000 Avg: 0.2219
+train Instance Lymphocyte: 0.6683 Tumor: 0.0000 Other: 0.0000 Binary: 0.6904 Avg: 0.2228
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5591 Type: 1.6364 Binary: 1.5578 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8337
+valid Tissue Stroma: 0.4285 Tumor: 0.0000 Avg: 0.1428
+valid Instance Lymphocyte: 0.4249 Tumor: 0.0000 Other: 0.0000 Binary: 0.4359 Avg: 0.1416
+lr: 5.913954351833187e-05
+
+Epoch 26/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9722 Type: 1.3705 Binary: 0.9548 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6879
+train Tissue Stroma: 0.6716 Tumor: 0.0000 Avg: 0.2239
+train Instance Lymphocyte: 0.6627 Tumor: 0.0000 Other: 0.0000 Binary: 0.6952 Avg: 0.2209
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5733 Type: 1.6138 Binary: 1.5795 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8332
+valid Tissue Stroma: 0.4283 Tumor: 0.0000 Avg: 0.1428
+valid Instance Lymphocyte: 0.4227 Tumor: 0.0000 Other: 0.0000 Binary: 0.4377 Avg: 0.1409
+lr: 5.795675264796523e-05
+
+Epoch 27/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.9717 Type: 1.3712 Binary: 0.9538 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6876
+train Tissue Stroma: 0.6686 Tumor: 0.0000 Avg: 0.2229
+train Instance Lymphocyte: 0.6547 Tumor: 0.0000 Other: 0.0000 Binary: 0.6990 Avg: 0.2182
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5537 Type: 1.5899 Binary: 1.5857 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8157
+valid Tissue Stroma: 0.4246 Tumor: 0.0000 Avg: 0.1415
+valid Instance Lymphocyte: 0.4204 Tumor: 0.0000 Other: 0.0000 Binary: 0.4384 Avg: 0.1401
+lr: 5.6797617595005923e-05
+
+Epoch 28/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9744 Type: 1.3725 Binary: 0.9560 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6869
+train Tissue Stroma: 0.6611 Tumor: 0.0000 Avg: 0.2204
+train Instance Lymphocyte: 0.6544 Tumor: 0.0000 Other: 0.0000 Binary: 0.7008 Avg: 0.2181
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6136 Type: 1.6160 Binary: 1.5951 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8088
+valid Tissue Stroma: 0.4230 Tumor: 0.0000 Avg: 0.1410
+valid Instance Lymphocyte: 0.4237 Tumor: 0.0000 Other: 0.0000 Binary: 0.4390 Avg: 0.1412
+lr: 5.56616652431058e-05
+
+Epoch 29/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.8779 Type: 1.3564 Binary: 0.9187 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6810
+train Tissue Stroma: 0.6650 Tumor: 0.0000 Avg: 0.2217
+train Instance Lymphocyte: 0.6692 Tumor: 0.0000 Other: 0.0000 Binary: 0.7128 Avg: 0.2231
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6063 Type: 1.6301 Binary: 1.5829 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7995
+valid Tissue Stroma: 0.4207 Tumor: 0.0000 Avg: 0.1402
+valid Instance Lymphocyte: 0.4253 Tumor: 0.0000 Other: 0.0000 Binary: 0.4382 Avg: 0.1418
+lr: 5.4548431938243684e-05
+
+Epoch 30/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.9850 Type: 1.3704 Binary: 0.9586 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6873
+train Tissue Stroma: 0.6508 Tumor: 0.0000 Avg: 0.2169
+train Instance Lymphocyte: 0.6630 Tumor: 0.0000 Other: 0.0000 Binary: 0.6972 Avg: 0.2210
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6123 Type: 1.6449 Binary: 1.5715 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8021
+valid Tissue Stroma: 0.4214 Tumor: 0.0000 Avg: 0.1405
+valid Instance Lymphocyte: 0.4271 Tumor: 0.0000 Other: 0.0000 Binary: 0.4374 Avg: 0.1424
+lr: 5.345746329947881e-05
+
+Epoch 31/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9862 Type: 1.3732 Binary: 0.9579 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6884
+train Tissue Stroma: 0.6559 Tumor: 0.0000 Avg: 0.2186
+train Instance Lymphocyte: 0.6685 Tumor: 0.0000 Other: 0.0000 Binary: 0.6962 Avg: 0.2228
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6344 Type: 1.6564 Binary: 1.5676 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8167
+valid Tissue Stroma: 0.4246 Tumor: 0.0000 Avg: 0.1415
+valid Instance Lymphocyte: 0.4282 Tumor: 0.0000 Other: 0.0000 Binary: 0.4370 Avg: 0.1427
+lr: 5.2388314033489236e-05
+
+Epoch 32/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.8174 Type: 1.3462 Binary: 0.8947 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6761
+train Tissue Stroma: 0.6817 Tumor: 0.0000 Avg: 0.2272
+train Instance Lymphocyte: 0.6885 Tumor: 0.0000 Other: 0.0000 Binary: 0.7181 Avg: 0.2295
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6438 Type: 1.6551 Binary: 1.5670 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8279
+valid Tissue Stroma: 0.4265 Tumor: 0.0000 Avg: 0.1422
+valid Instance Lymphocyte: 0.4278 Tumor: 0.0000 Other: 0.0000 Binary: 0.4367 Avg: 0.1426
+lr: 5.134054775281945e-05
+
+Epoch 33/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9647 Type: 1.3677 Binary: 0.9510 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6870
+train Tissue Stroma: 0.6701 Tumor: 0.0000 Avg: 0.2234
+train Instance Lymphocyte: 0.6701 Tumor: 0.0000 Other: 0.0000 Binary: 0.6972 Avg: 0.2234
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6621 Type: 1.6541 Binary: 1.5757 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8386
+valid Tissue Stroma: 0.4283 Tumor: 0.0000 Avg: 0.1428
+valid Instance Lymphocyte: 0.4274 Tumor: 0.0000 Other: 0.0000 Binary: 0.4371 Avg: 0.1425
+lr: 5.031373679776306e-05
+
+Epoch 34/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.9694 Type: 1.3691 Binary: 0.9515 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6878
+train Tissue Stroma: 0.6694 Tumor: 0.0000 Avg: 0.2231
+train Instance Lymphocyte: 0.6638 Tumor: 0.0000 Other: 0.0000 Binary: 0.6972 Avg: 0.2213
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5649 Type: 1.6052 Binary: 1.5677 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8217
+valid Tissue Stroma: 0.4253 Tumor: 0.0000 Avg: 0.1418
+valid Instance Lymphocyte: 0.4223 Tumor: 0.0000 Other: 0.0000 Binary: 0.4366 Avg: 0.1408
+lr: 4.9307462061807795e-05
+
+Epoch 35/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.8144 Type: 1.3469 Binary: 0.8914 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6758
+train Tissue Stroma: 0.6833 Tumor: 0.0000 Avg: 0.2278
+train Instance Lymphocyte: 0.6765 Tumor: 0.0000 Other: 0.0000 Binary: 0.7193 Avg: 0.2255
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6022 Type: 1.6302 Binary: 1.5800 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8217
+valid Tissue Stroma: 0.4253 Tumor: 0.0000 Avg: 0.1418
+valid Instance Lymphocyte: 0.4250 Tumor: 0.0000 Other: 0.0000 Binary: 0.4375 Avg: 0.1417
+lr: 4.832131282057164e-05
+
+Epoch 36/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9581 Type: 1.3649 Binary: 0.9501 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6861
+train Tissue Stroma: 0.6659 Tumor: 0.0000 Avg: 0.2220
+train Instance Lymphocyte: 0.6680 Tumor: 0.0000 Other: 0.0000 Binary: 0.7005 Avg: 0.2227
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6804 Type: 1.6728 Binary: 1.5964 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8252
+valid Tissue Stroma: 0.4260 Tumor: 0.0000 Avg: 0.1420
+valid Instance Lymphocyte: 0.4292 Tumor: 0.0000 Other: 0.0000 Binary: 0.4385 Avg: 0.1431
+lr: 4.735488656416021e-05
+
+Epoch 37/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.9586 Type: 1.3644 Binary: 0.9494 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6858
+train Tissue Stroma: 0.6666 Tumor: 0.0000 Avg: 0.2222
+train Instance Lymphocyte: 0.6750 Tumor: 0.0000 Other: 0.0000 Binary: 0.7032 Avg: 0.2250
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6691 Type: 1.6651 Binary: 1.5984 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8197
+valid Tissue Stroma: 0.4251 Tumor: 0.0000 Avg: 0.1417
+valid Instance Lymphocyte: 0.4291 Tumor: 0.0000 Other: 0.0000 Binary: 0.4389 Avg: 0.1430
+lr: 4.6407788832877e-05
+
+Epoch 38/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.8573 Type: 1.3459 Binary: 0.9115 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6781
+train Tissue Stroma: 0.6752 Tumor: 0.0000 Avg: 0.2251
+train Instance Lymphocyte: 0.6855 Tumor: 0.0000 Other: 0.0000 Binary: 0.7163 Avg: 0.2285
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6665 Type: 1.6542 Binary: 1.6001 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8183
+valid Tissue Stroma: 0.4249 Tumor: 0.0000 Avg: 0.1416
+valid Instance Lymphocyte: 0.4288 Tumor: 0.0000 Other: 0.0000 Binary: 0.4394 Avg: 0.1429
+lr: 4.547963305621946e-05
+
+Epoch 39/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.9515 Type: 1.3599 Binary: 0.9471 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6856
+train Tissue Stroma: 0.6645 Tumor: 0.0000 Avg: 0.2215
+train Instance Lymphocyte: 0.6721 Tumor: 0.0000 Other: 0.0000 Binary: 0.7046 Avg: 0.2240
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6313 Type: 1.6255 Binary: 1.5951 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8169
+valid Tissue Stroma: 0.4251 Tumor: 0.0000 Avg: 0.1417
+valid Instance Lymphocyte: 0.4270 Tumor: 0.0000 Other: 0.0000 Binary: 0.4396 Avg: 0.1423
+lr: 4.4570040395095074e-05
+
+Epoch 40/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.9548 Type: 1.3583 Binary: 0.9496 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6859
+train Tissue Stroma: 0.6615 Tumor: 0.0000 Avg: 0.2205
+train Instance Lymphocyte: 0.6649 Tumor: 0.0000 Other: 0.0000 Binary: 0.7023 Avg: 0.2216
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5645 Type: 1.5871 Binary: 1.5761 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8076
+valid Tissue Stroma: 0.4233 Tumor: 0.0000 Avg: 0.1411
+valid Instance Lymphocyte: 0.4242 Tumor: 0.0000 Other: 0.0000 Binary: 0.4390 Avg: 0.1414
+lr: 4.367863958719317e-05
+
+Epoch 41/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.9407 Type: 1.3568 Binary: 0.9419 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6849
+train Tissue Stroma: 0.6560 Tumor: 0.0000 Avg: 0.2187
+train Instance Lymphocyte: 0.6546 Tumor: 0.0000 Other: 0.0000 Binary: 0.7003 Avg: 0.2182
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4630 Type: 1.5571 Binary: 1.5492 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7942
+valid Tissue Stroma: 0.4208 Tumor: 0.0000 Avg: 0.1403
+valid Instance Lymphocyte: 0.4223 Tumor: 0.0000 Other: 0.0000 Binary: 0.4381 Avg: 0.1408
+lr: 4.2805066795449306e-05
+
+Epoch 42/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.7984 Type: 1.3411 Binary: 0.8835 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6772
+train Tissue Stroma: 0.6707 Tumor: 0.0000 Avg: 0.2236
+train Instance Lymphocyte: 0.6709 Tumor: 0.0000 Other: 0.0000 Binary: 0.7187 Avg: 0.2236
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5209 Type: 1.6054 Binary: 1.5457 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8074
+valid Tissue Stroma: 0.4239 Tumor: 0.0000 Avg: 0.1413
+valid Instance Lymphocyte: 0.4292 Tumor: 0.0000 Other: 0.0000 Binary: 0.4386 Avg: 0.1431
+lr: 4.194896545954032e-05
+
+Epoch 43/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.9295 Type: 1.3546 Binary: 0.9378 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6859
+train Tissue Stroma: 0.6615 Tumor: 0.0000 Avg: 0.2205
+train Instance Lymphocyte: 0.6718 Tumor: 0.0000 Other: 0.0000 Binary: 0.6990 Avg: 0.2239
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6317 Type: 1.6722 Binary: 1.5563 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8251
+valid Tissue Stroma: 0.4278 Tumor: 0.0000 Avg: 0.1426
+valid Instance Lymphocyte: 0.4363 Tumor: 0.0000 Other: 0.0000 Binary: 0.4400 Avg: 0.1454
+lr: 4.110998615034951e-05
+
+Epoch 44/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.9223 Type: 1.3482 Binary: 0.9346 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6844
+train Tissue Stroma: 0.6696 Tumor: 0.0000 Avg: 0.2232
+train Instance Lymphocyte: 0.6846 Tumor: 0.0000 Other: 0.0000 Binary: 0.7011 Avg: 0.2282
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6252 Type: 1.6680 Binary: 1.5534 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8257
+valid Tissue Stroma: 0.4283 Tumor: 0.0000 Avg: 0.1428
+valid Instance Lymphocyte: 0.4381 Tumor: 0.0000 Other: 0.0000 Binary: 0.4411 Avg: 0.1460
+lr: 4.028778642734252e-05
+
+Epoch 45/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.7622 Type: 1.3190 Binary: 0.8737 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6730
+train Tissue Stroma: 0.6888 Tumor: 0.0000 Avg: 0.2296
+train Instance Lymphocyte: 0.7033 Tumor: 0.0000 Other: 0.0000 Binary: 0.7238 Avg: 0.2344
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6135 Type: 1.6484 Binary: 1.5585 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8285
+valid Tissue Stroma: 0.4291 Tumor: 0.0000 Avg: 0.1430
+valid Instance Lymphocyte: 0.4391 Tumor: 0.0000 Other: 0.0000 Binary: 0.4430 Avg: 0.1464
+lr: 3.948203069879567e-05
+
+Epoch 46/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.8996 Type: 1.3354 Binary: 0.9254 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6838
+train Tissue Stroma: 0.6712 Tumor: 0.0000 Avg: 0.2237
+train Instance Lymphocyte: 0.6826 Tumor: 0.0000 Other: 0.0000 Binary: 0.7054 Avg: 0.2275
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5840 Type: 1.6100 Binary: 1.5610 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8270
+valid Tissue Stroma: 0.4291 Tumor: 0.0000 Avg: 0.1430
+valid Instance Lymphocyte: 0.4393 Tumor: 0.0000 Other: 0.0000 Binary: 0.4452 Avg: 0.1464
+lr: 3.869239008481975e-05
+
+Epoch 47/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.8892 Type: 1.3268 Binary: 0.9201 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6833
+train Tissue Stroma: 0.6684 Tumor: 0.0000 Avg: 0.2228
+train Instance Lymphocyte: 0.6764 Tumor: 0.0000 Other: 0.0000 Binary: 0.7077 Avg: 0.2255
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5169 Type: 1.5695 Binary: 1.5543 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8149
+valid Tissue Stroma: 0.4274 Tumor: 0.0000 Avg: 0.1425
+valid Instance Lymphocyte: 0.4404 Tumor: 0.0000 Other: 0.0000 Binary: 0.4474 Avg: 0.1468
+lr: 3.791854228312336e-05
+
+Epoch 48/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.7852 Type: 1.3081 Binary: 0.8792 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6760
+train Tissue Stroma: 0.6738 Tumor: 0.0000 Avg: 0.2246
+train Instance Lymphocyte: 0.6808 Tumor: 0.0000 Other: 0.0000 Binary: 0.7212 Avg: 0.2269
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4929 Type: 1.5578 Binary: 1.5495 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8074
+valid Tissue Stroma: 0.4262 Tumor: 0.0000 Avg: 0.1421
+valid Instance Lymphocyte: 0.4446 Tumor: 0.0000 Other: 0.0000 Binary: 0.4499 Avg: 0.1482
+lr: 3.716017143746089e-05
+
+Epoch 49/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.8446 Type: 1.3020 Binary: 0.9020 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6816
+train Tissue Stroma: 0.6622 Tumor: 0.0000 Avg: 0.2207
+train Instance Lymphocyte: 0.6804 Tumor: 0.0000 Other: 0.0000 Binary: 0.7132 Avg: 0.2268
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4915 Type: 1.5622 Binary: 1.5351 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8082
+valid Tissue Stroma: 0.4269 Tumor: 0.0000 Avg: 0.1423
+valid Instance Lymphocyte: 0.4530 Tumor: 0.0000 Other: 0.0000 Binary: 0.4536 Avg: 0.1510
+lr: 3.641696800871167e-05
+
+Epoch 50/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.8127 Type: 1.2880 Binary: 0.8897 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6818
+train Tissue Stroma: 0.6604 Tumor: 0.0000 Avg: 0.2201
+train Instance Lymphocyte: 0.6845 Tumor: 0.0000 Other: 0.0000 Binary: 0.7136 Avg: 0.2282
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.3684 Type: 1.5195 Binary: 1.4877 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7987
+valid Tissue Stroma: 0.4259 Tumor: 0.0000 Avg: 0.1420
+valid Instance Lymphocyte: 0.4616 Tumor: 0.0000 Other: 0.0000 Binary: 0.4577 Avg: 0.1539
+lr: 3.5688628648537436e-05
+
+Epoch 51/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.7678 Type: 1.2642 Binary: 0.8714 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6809
+train Tissue Stroma: 0.6574 Tumor: 0.0000 Avg: 0.2191
+train Instance Lymphocyte: 0.6899 Tumor: 0.0000 Other: 0.0000 Binary: 0.7141 Avg: 0.2300
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.3601 Type: 1.5306 Binary: 1.4787 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7962
+valid Tissue Stroma: 0.4260 Tumor: 0.0000 Avg: 0.1420
+valid Instance Lymphocyte: 0.4712 Tumor: 0.0000 Other: 0.0000 Binary: 0.4625 Avg: 0.1571
+lr: 3.4974856075566685e-05
+
+Epoch 52/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.7296 Type: 1.2344 Binary: 0.8520 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6804
+train Tissue Stroma: 0.6580 Tumor: 0.0000 Avg: 0.2193
+train Instance Lymphocyte: 0.7076 Tumor: 0.0000 Other: 0.0000 Binary: 0.7204 Avg: 0.2359
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.3593 Type: 1.5380 Binary: 1.4642 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8024
+valid Tissue Stroma: 0.4283 Tumor: 0.0000 Avg: 0.1428
+valid Instance Lymphocyte: 0.4831 Tumor: 0.0000 Other: 0.0000 Binary: 0.4689 Avg: 0.1610
+lr: 3.427535895405535e-05
+
+Epoch 53/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+train Loss ALL: 3.6563 Type: 1.1997 Binary: 0.8214 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6781
+train Tissue Stroma: 0.6630 Tumor: 0.0000 Avg: 0.2210
+train Instance Lymphocyte: 0.7184 Tumor: 0.0000 Other: 0.0000 Binary: 0.7256 Avg: 0.2395
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.1790 Type: 1.4424 Binary: 1.3869 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8028
+valid Tissue Stroma: 0.4297 Tumor: 0.0000 Avg: 0.1432
+valid Instance Lymphocyte: 0.5042 Tumor: 0.0000 Other: 0.0000 Binary: 0.4809 Avg: 0.1681
+lr: 3.358985177497424e-05
+
+Epoch 54/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.5814 Type: 1.1586 Binary: 0.7871 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6766
+train Tissue Stroma: 0.6649 Tumor: 0.0000 Avg: 0.2216
+train Instance Lymphocyte: 0.7279 Tumor: 0.0000 Other: 0.0000 Binary: 0.7318 Avg: 0.2426
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.2314 Type: 1.4774 Binary: 1.4040 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8031
+valid Tissue Stroma: 0.4315 Tumor: 0.0000 Avg: 0.1438
+valid Instance Lymphocyte: 0.5172 Tumor: 0.0000 Other: 0.0000 Binary: 0.4895 Avg: 0.1724
+lr: 3.291805473947476e-05
+
+Epoch 55/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.4528 Type: 1.1261 Binary: 0.7355 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6694
+train Tissue Stroma: 0.6781 Tumor: 0.0000 Avg: 0.2260
+train Instance Lymphocyte: 0.7572 Tumor: 0.0000 Other: 0.0000 Binary: 0.7552 Avg: 0.2524
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.2745 Type: 1.4937 Binary: 1.4095 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8089
+valid Tissue Stroma: 0.4342 Tumor: 0.0000 Avg: 0.1447
+valid Instance Lymphocyte: 0.5325 Tumor: 0.0000 Other: 0.0000 Binary: 0.5000 Avg: 0.1775
+lr: 3.225969364468526e-05
+
+Epoch 56/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.3104 Type: 1.0747 Binary: 0.6726 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6647
+train Tissue Stroma: 0.6928 Tumor: 0.0000 Avg: 0.2309
+train Instance Lymphocyte: 0.7824 Tumor: 0.0000 Other: 0.0000 Binary: 0.7770 Avg: 0.2608
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4243 Type: 1.5680 Binary: 1.4544 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8237
+valid Tissue Stroma: 0.4377 Tumor: 0.0000 Avg: 0.1459
+valid Instance Lymphocyte: 0.5402 Tumor: 0.0000 Other: 0.0000 Binary: 0.5070 Avg: 0.1801
+lr: 3.161449977179156e-05
+
+Epoch 57/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.3319 Type: 1.0328 Binary: 0.6692 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6729
+train Tissue Stroma: 0.6808 Tumor: 0.0000 Avg: 0.2269
+train Instance Lymphocyte: 0.7934 Tumor: 0.0000 Other: 0.0000 Binary: 0.7758 Avg: 0.2645
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.1832 Type: 1.4423 Binary: 1.3450 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8256
+valid Tissue Stroma: 0.4400 Tumor: 0.0000 Avg: 0.1467
+valid Instance Lymphocyte: 0.5745 Tumor: 0.0000 Other: 0.0000 Binary: 0.5289 Avg: 0.1915
+lr: 3.0982209776355726e-05
+
+Epoch 58/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 3.2688 Type: 1.0086 Binary: 0.6333 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6699
+train Tissue Stroma: 0.6816 Tumor: 0.0000 Avg: 0.2272
+train Instance Lymphocyte: 0.7972 Tumor: 0.0000 Other: 0.0000 Binary: 0.7808 Avg: 0.2657
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.3459 Type: 1.5496 Binary: 1.4086 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8095
+valid Tissue Stroma: 0.4399 Tumor: 0.0000 Avg: 0.1466
+valid Instance Lymphocyte: 0.5742 Tumor: 0.0000 Other: 0.0000 Binary: 0.5332 Avg: 0.1914
+lr: 3.0362565580828612e-05
+
+Epoch 59/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.2039 Type: 0.9814 Binary: 0.6001 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6674
+train Tissue Stroma: 0.6747 Tumor: 0.0000 Avg: 0.2249
+train Instance Lymphocyte: 0.8215 Tumor: 0.0000 Other: 0.0000 Binary: 0.7983 Avg: 0.2738
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4265 Type: 1.6307 Binary: 1.4474 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7858
+valid Tissue Stroma: 0.4387 Tumor: 0.0000 Avg: 0.1462
+valid Instance Lymphocyte: 0.5752 Tumor: 0.0000 Other: 0.0000 Binary: 0.5384 Avg: 0.1917
+lr: 2.975531426921204e-05
+
+Epoch 60/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.0721 Type: 0.9720 Binary: 0.5439 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6558
+train Tissue Stroma: 0.6887 Tumor: 0.0000 Avg: 0.2296
+train Instance Lymphocyte: 0.8405 Tumor: 0.0000 Other: 0.0000 Binary: 0.8219 Avg: 0.2802
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.4200 Type: 1.6442 Binary: 1.4254 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7879
+valid Tissue Stroma: 0.4426 Tumor: 0.0000 Avg: 0.1475
+valid Instance Lymphocyte: 0.5866 Tumor: 0.0000 Other: 0.0000 Binary: 0.5510 Avg: 0.1955
+lr: 2.9160207983827797e-05
+
+Epoch 61/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 3.1386 Type: 0.9679 Binary: 0.5569 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6587
+train Tissue Stroma: 0.6747 Tumor: 0.0000 Avg: 0.2249
+train Instance Lymphocyte: 0.8372 Tumor: 0.0000 Other: 0.0000 Binary: 0.8139 Avg: 0.2791
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.3254 Type: 1.6121 Binary: 1.3672 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7836
+valid Tissue Stroma: 0.4458 Tumor: 0.0000 Avg: 0.1486
+valid Instance Lymphocyte: 0.6012 Tumor: 0.0000 Other: 0.0000 Binary: 0.5667 Avg: 0.2004
+lr: 2.8577003824151242e-05
+
+Epoch 62/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.1138 Type: 0.9934 Binary: 0.5498 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6487
+train Tissue Stroma: 0.6908 Tumor: 0.0000 Avg: 0.2303
+train Instance Lymphocyte: 0.8425 Tumor: 0.0000 Other: 0.0000 Binary: 0.8243 Avg: 0.2808
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6094 Type: 1.7773 Binary: 1.4732 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7964
+valid Tissue Stroma: 0.4519 Tumor: 0.0000 Avg: 0.1506
+valid Instance Lymphocyte: 0.5860 Tumor: 0.0000 Other: 0.0000 Binary: 0.5613 Avg: 0.1953
+lr: 2.8005463747668217e-05
+
+Epoch 63/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 2.9806 Type: 0.9450 Binary: 0.4950 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6403
+train Tissue Stroma: 0.7083 Tumor: 0.0000 Avg: 0.2361
+train Instance Lymphocyte: 0.8589 Tumor: 0.0000 Other: 0.0000 Binary: 0.8410 Avg: 0.2863
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5925 Type: 1.7762 Binary: 1.4453 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8085
+valid Tissue Stroma: 0.4573 Tumor: 0.0000 Avg: 0.1524
+valid Instance Lymphocyte: 0.5937 Tumor: 0.0000 Other: 0.0000 Binary: 0.5728 Avg: 0.1979
+lr: 2.744535447271485e-05
+
+Epoch 64/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.0489 Type: 0.9386 Binary: 0.5010 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6445
+train Tissue Stroma: 0.7002 Tumor: 0.0000 Avg: 0.2334
+train Instance Lymphocyte: 0.8589 Tumor: 0.0000 Other: 0.0000 Binary: 0.8399 Avg: 0.2863
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6401 Type: 1.8001 Binary: 1.4521 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.8098
+valid Tissue Stroma: 0.4620 Tumor: 0.0000 Avg: 0.1540
+valid Instance Lymphocyte: 0.5958 Tumor: 0.0000 Other: 0.0000 Binary: 0.5792 Avg: 0.1986
+lr: 2.6896447383260553e-05
+
+Epoch 65/79
+----------
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.0311 Type: 0.9451 Binary: 0.4962 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6367
+train Tissue Stroma: 0.7076 Tumor: 0.0000 Avg: 0.2359
+train Instance Lymphocyte: 0.8590 Tumor: 0.0000 Other: 0.0000 Binary: 0.8438 Avg: 0.2863
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6383 Type: 1.8091 Binary: 1.4531 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7980
+valid Tissue Stroma: 0.4670 Tumor: 0.0000 Avg: 0.1557
+valid Instance Lymphocyte: 0.5980 Tumor: 0.0000 Other: 0.0000 Binary: 0.5856 Avg: 0.1993
+lr: 2.635851843559534e-05
+
+Epoch 66/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.9122 Type: 0.9288 Binary: 0.4668 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6202
+train Tissue Stroma: 0.7247 Tumor: 0.0000 Avg: 0.2416
+train Instance Lymphocyte: 0.8651 Tumor: 0.0000 Other: 0.0000 Binary: 0.8539 Avg: 0.2884
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7460 Type: 1.8702 Binary: 1.5149 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7828
+valid Tissue Stroma: 0.4723 Tumor: 0.0000 Avg: 0.1574
+valid Instance Lymphocyte: 0.5919 Tumor: 0.0000 Other: 0.0000 Binary: 0.5831 Avg: 0.1973
+lr: 2.5831348066883435e-05
+
+Epoch 67/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 3.0154 Type: 0.9717 Binary: 0.5061 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6156
+train Tissue Stroma: 0.7192 Tumor: 0.0000 Avg: 0.2397
+train Instance Lymphocyte: 0.8585 Tumor: 0.0000 Other: 0.0000 Binary: 0.8499 Avg: 0.2862
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8241 Type: 1.8986 Binary: 1.5571 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7746
+valid Tissue Stroma: 0.4779 Tumor: 0.0000 Avg: 0.1593
+valid Instance Lymphocyte: 0.5895 Tumor: 0.0000 Other: 0.0000 Binary: 0.5829 Avg: 0.1965
+lr: 2.5314721105545764e-05
+
+Epoch 68/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 3.0030 Type: 0.9688 Binary: 0.5043 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.6080
+train Tissue Stroma: 0.7218 Tumor: 0.0000 Avg: 0.2406
+train Instance Lymphocyte: 0.8564 Tumor: 0.0000 Other: 0.0000 Binary: 0.8497 Avg: 0.2855
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5572 Type: 1.7561 Binary: 1.4444 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7630
+valid Tissue Stroma: 0.4845 Tumor: 0.0000 Avg: 0.1615
+valid Instance Lymphocyte: 0.6076 Tumor: 0.0000 Other: 0.0000 Binary: 0.6013 Avg: 0.2025
+lr: 2.4808426683434848e-05
+
+Epoch 69/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.8767 Type: 0.9247 Binary: 0.4579 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5957
+train Tissue Stroma: 0.7352 Tumor: 0.0000 Avg: 0.2451
+train Instance Lymphocyte: 0.8642 Tumor: 0.0000 Other: 0.0000 Binary: 0.8594 Avg: 0.2881
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8648 Type: 1.8992 Binary: 1.5899 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7663
+valid Tissue Stroma: 0.4908 Tumor: 0.0000 Avg: 0.1636
+valid Instance Lymphocyte: 0.5897 Tumor: 0.0000 Other: 0.0000 Binary: 0.5866 Avg: 0.1966
+lr: 2.431225814976615e-05
+
+Epoch 70/79
+----------
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.9457 Type: 0.9282 Binary: 0.4664 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5902
+train Tissue Stroma: 0.7314 Tumor: 0.0000 Avg: 0.2438
+train Instance Lymphocyte: 0.8663 Tumor: 0.0000 Other: 0.0000 Binary: 0.8623 Avg: 0.2888
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8726 Type: 1.8905 Binary: 1.6033 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7694
+valid Tissue Stroma: 0.4964 Tumor: 0.0000 Avg: 0.1655
+valid Instance Lymphocyte: 0.5896 Tumor: 0.0000 Other: 0.0000 Binary: 0.5873 Avg: 0.1965
+lr: 2.3826012986770827e-05
+
+Epoch 71/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 2.9149 Type: 0.9164 Binary: 0.4561 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5795
+train Tissue Stroma: 0.7375 Tumor: 0.0000 Avg: 0.2458
+train Instance Lymphocyte: 0.8650 Tumor: 0.0000 Other: 0.0000 Binary: 0.8625 Avg: 0.2883
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5650 Type: 1.7356 Binary: 1.4717 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7561
+valid Tissue Stroma: 0.5038 Tumor: 0.0000 Avg: 0.1679
+valid Instance Lymphocyte: 0.6087 Tumor: 0.0000 Other: 0.0000 Binary: 0.6055 Avg: 0.2029
+lr: 2.334949272703541e-05
+
+Epoch 72/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+train Loss ALL: 2.9447 Type: 0.9580 Binary: 0.4934 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5715
+train Tissue Stroma: 0.7461 Tumor: 0.0000 Avg: 0.2487
+train Instance Lymphocyte: 0.8522 Tumor: 0.0000 Other: 0.0000 Binary: 0.8523 Avg: 0.2841
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5708 Type: 1.7395 Binary: 1.5045 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7331
+valid Tissue Stroma: 0.5150 Tumor: 0.0000 Avg: 0.1717
+valid Instance Lymphocyte: 0.6049 Tumor: 0.0000 Other: 0.0000 Binary: 0.6018 Avg: 0.2016
+lr: 2.2882502872494702e-05
+
+Epoch 73/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 2.8710 Type: 0.9040 Binary: 0.4445 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5576
+train Tissue Stroma: 0.7462 Tumor: 0.0000 Avg: 0.2487
+train Instance Lymphocyte: 0.8649 Tumor: 0.0000 Other: 0.0000 Binary: 0.8649 Avg: 0.2883
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7405 Type: 1.8187 Binary: 1.6105 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7253
+valid Tissue Stroma: 0.5242 Tumor: 0.0000 Avg: 0.1747
+valid Instance Lymphocyte: 0.5918 Tumor: 0.0000 Other: 0.0000 Binary: 0.5890 Avg: 0.1973
+lr: 2.2424852815044807e-05
+
+Epoch 74/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.8631 Type: 0.9099 Binary: 0.4497 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5466
+train Tissue Stroma: 0.7547 Tumor: 0.0000 Avg: 0.2516
+train Instance Lymphocyte: 0.8656 Tumor: 0.0000 Other: 0.0000 Binary: 0.8664 Avg: 0.2885
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.5572 Type: 1.7243 Binary: 1.5227 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7320
+valid Tissue Stroma: 0.5293 Tumor: 0.0000 Avg: 0.1764
+valid Instance Lymphocyte: 0.6020 Tumor: 0.0000 Other: 0.0000 Binary: 0.5987 Avg: 0.2007
+lr: 2.197635575874391e-05
+
+Epoch 75/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.7864 Type: 0.9113 Binary: 0.4360 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5387
+train Tissue Stroma: 0.7743 Tumor: 0.0000 Avg: 0.2581
+train Instance Lymphocyte: 0.8645 Tumor: 0.0000 Other: 0.0000 Binary: 0.8677 Avg: 0.2882
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6052 Type: 1.7344 Binary: 1.5356 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7571
+valid Tissue Stroma: 0.5311 Tumor: 0.0000 Avg: 0.1770
+valid Instance Lymphocyte: 0.6005 Tumor: 0.0000 Other: 0.0000 Binary: 0.5977 Avg: 0.2002
+lr: 2.153682864356903e-05
+
+Epoch 76/79
+----------
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.8331 Type: 0.9036 Binary: 0.4425 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5280
+train Tissue Stroma: 0.7784 Tumor: 0.0000 Avg: 0.2595
+train Instance Lymphocyte: 0.8638 Tumor: 0.0000 Other: 0.0000 Binary: 0.8661 Avg: 0.2879
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.6895 Type: 1.7742 Binary: 1.5714 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7658
+valid Tissue Stroma: 0.5371 Tumor: 0.0000 Avg: 0.1790
+valid Instance Lymphocyte: 0.5947 Tumor: 0.0000 Other: 0.0000 Binary: 0.5927 Avg: 0.1982
+lr: 2.1106092070697648e-05
+
+Epoch 77/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+train Loss ALL: 2.8599 Type: 0.9394 Binary: 0.4736 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5250
+train Tissue Stroma: 0.7890 Tumor: 0.0000 Avg: 0.2630
+train Instance Lymphocyte: 0.8588 Tumor: 0.0000 Other: 0.0000 Binary: 0.8617 Avg: 0.2863
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8092 Type: 1.8363 Binary: 1.6287 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7582
+valid Tissue Stroma: 0.5485 Tumor: 0.0000 Avg: 0.1828
+valid Instance Lymphocyte: 0.5874 Tumor: 0.0000 Other: 0.0000 Binary: 0.5863 Avg: 0.1958
+lr: 2.0683970229283696e-05
+
+Epoch 78/79
+----------
+image_id = la_017
+self.jsfiles[idx] = la_017.png
+self.path = datasets/puma
+image_id = la_017
+mask_path = dataset/mask_npy/0012203205_label_017.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+train Loss ALL: 2.7088 Type: 0.8877 Binary: 0.4124 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5102
+train Tissue Stroma: 0.8013 Tumor: 0.0000 Avg: 0.2671
+train Instance Lymphocyte: 0.8718 Tumor: 0.0000 Other: 0.0000 Binary: 0.8746 Avg: 0.2906
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.8770 Type: 1.8663 Binary: 1.6481 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7688
+valid Tissue Stroma: 0.5542 Tumor: 0.0000 Avg: 0.1847
+valid Instance Lymphocyte: 0.5859 Tumor: 0.0000 Other: 0.0000 Binary: 0.5854 Avg: 0.1953
+lr: 2.027029082469802e-05
+
+Epoch 79/79
+----------
+image_id = la_007
+self.jsfiles[idx] = la_007.png
+self.path = datasets/puma
+image_id = la_007
+mask_path = dataset/mask_npy/0012203205_label_007.npy
+image_id = la_019
+self.jsfiles[idx] = la_019.png
+self.path = datasets/puma
+image_id = la_019
+mask_path = dataset/mask_npy/0012203205_label_019.npy
+image_id = la_009
+self.jsfiles[idx] = la_009.png
+self.path = datasets/puma
+image_id = la_009
+mask_path = dataset/mask_npy/0012203205_label_009.npy
+image_id = la_023
+self.jsfiles[idx] = la_023.png
+self.path = datasets/puma
+image_id = la_023
+mask_path = dataset/mask_npy/0012203205_label_023.npy
+train Loss ALL: 2.8071 Type: 0.9051 Binary: 0.4427 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.5023
+train Tissue Stroma: 0.8023 Tumor: 0.0000 Avg: 0.2674
+train Instance Lymphocyte: 0.8643 Tumor: 0.0000 Other: 0.0000 Binary: 0.8666 Avg: 0.2881
+image_id = la_005
+self.jsfiles[idx] = la_005.png
+self.path = datasets/puma
+image_id = la_005
+mask_path = dataset/mask_npy/0012203205_label_005.npy
+valid Loss ALL: 5.7215 Type: 1.7901 Binary: 1.5606 MSE: 0.0000 MSGE: 0.0000 Tissue: 0.7770
+valid Tissue Stroma: 0.5588 Tumor: 0.0000 Avg: 0.1863
+valid Instance Lymphocyte: 0.5980 Tumor: 0.0000 Other: 0.0000 Binary: 0.5979 Avg: 0.1993
+lr: 1.986488500820406e-05
+
+Training complete in 1m 54s
+Best val loss: 5.178982
+puma
+------------------------------------------
+Total Params = 234.327839M
+Start pipeline for case: 0012203205
+
+Running: python train_puma.py
+
+Running: python eval_puma.py

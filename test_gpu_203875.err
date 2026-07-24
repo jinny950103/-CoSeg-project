@@ -1,0 +1,22 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 2.0.8 (you have 1.4.8). Upgrade using: pip install --upgrade albumentations
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 19, in <module>
+    from model import CoSeg
+  File "/home/u9444861/-CoSeg-project/model.py", line 16, in <module>
+    from sam2.utils.metrics import get_fast_pq, remap_label, get_fast_aji
+  File "/home/u9444861/-CoSeg-project/sam2/utils/metrics.py", line 58
+    pred = np.squeeze(pred)
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 57
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 25, in <module>
+    main()
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 17, in main
+    run(["python", "train_puma.py"])
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 6, in run
+    subprocess.run(cmd, check=True)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'train_puma.py']' returned non-zero exit status 1.
+ERROR conda.cli.main_run:execute(142): `conda run python run_pipeline.py` failed. (See above for error)
+ERROR conda.cli.main_run:execute(142): `conda run conda run -n coseg python run_pipeline.py` failed. (See above for error)

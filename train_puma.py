@@ -20,7 +20,7 @@ from model import CoSeg
 import hydra
 from functools import partial
 import albumentations as A
-from albumentations.pytorch.transforms import ToTensor
+from albumentations.pytorch import ToTensorV2
 from sam2.build_sam import build_sam2
 from torchmetrics.classification import BinaryAccuracy
 from monai.losses import DiceCELoss, DiceLoss, DiceFocalLoss
@@ -91,8 +91,13 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                     with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
                         pred_mask_ins, pred_mask_sem, pred_prob_ins, pred_prob_sem = model(x=img)
 
-                    ff_nuclei_loss = dice_ce_loss_b(pred_mask_ins, nuclei_binary_res)
-                    ff_tissue_loss = dice_ce_loss_b(pred_mask_sem, nuclei_tissue_binary)
+                    pred_mask_ins_1024 = F.interpolate(pred_mask_ins, size=(1024, 1024), mode='bilinear', align_corners=False)
+                    pred_mask_sem_1024 = F.interpolate(pred_mask_sem, size=(1024, 1024), mode='bilinear', align_corners=False)
+                    ff_nuclei_loss = dice_ce_loss_b(pred_mask_ins_1024, nuclei_binary_res)
+                    ff_tissue_loss = dice_ce_loss_b(pred_mask_sem_1024, nuclei_tissue_binary)
+                                        
+
+
                     log_prob1 = F.log_softmax(pred_prob_sem, dim=1)
                     prob2 = F.softmax(pred_prob_ins, dim=1)
 
@@ -109,7 +114,10 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                         pred_mask_ins, pred_mask_sem = model(x=img, 
                                                             prob_ins=pred_mask_ins, 
                                                             prob_sem=pred_mask_sem)
-                        
+                    
+
+                    pred_mask_ins_1024 = F.interpolate(pred_mask_ins, size=(1024, 1024), mode='bilinear', align_corners=False)
+                    pred_mask_sem_1024 = F.interpolate(pred_mask_sem, size=(1024, 1024), mode='bilinear', align_corners=False)    
                     nuclei_binary_map_pred = pred_mask_ins[:,0:1,:,:]
                     nuclei_type_map_pred = pred_mask_ins[:,1:1+args.ins_cls,:,:]
                     nuclei_hv_map_pred = pred_mask_ins[:,1+args.ins_cls:3+args.ins_cls,:,:]
@@ -120,8 +128,8 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                     multi_loss = dice_ce_loss_m(nuclei_type_map_pred, nuclei_type_map)
                     score_mask_ins_b = accuracy_metric(nuclei_binary_map_pred, nuclei_binary_map)
                     score_mask_ins_m = accuracy_metric_m(nuclei_type_map_pred, nuclei_type_map)
-                    loss_sem = dice_ce_loss_m(pred_mask_sem, tissue_map)
-                    score_mask_sem = accuracy_metric_m(pred_mask_sem, tissue_map)
+                    loss_sem = dice_ce_loss_m(pred_mask_sem_1024, tissue_map)
+                    score_mask_sem = accuracy_metric_m(pred_mask_sem_1024, tissue_map)
                     score_mask_sem = torch.nan_to_num(score_mask_sem)
                     score_mask_ins_m = torch.nan_to_num(score_mask_ins_m)
                     loss = 0.5*loss_forward_1 + multi_loss + binary_loss + 8 * hv_loss1 + 2.5 * hv_loss2 + loss_sem * 0.5
@@ -133,9 +141,12 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                     with torch.no_grad():
                         with torch.autocast(device_type="cuda", dtype=torch.bfloat16):
                             pred_mask_ins, pred_mask_sem, pred_prob_ins, pred_prob_sem = model(x=img)
+                        pred_mask_ins_1024 = F.interpolate(pred_mask_ins, size=(1024, 1024), mode='bilinear', align_corners=False)
+                        pred_mask_sem_1024 = F.interpolate(pred_mask_sem, size=(1024, 1024), mode='bilinear', align_corners=False)
+                        ff_nuclei_loss = dice_ce_loss_b(pred_mask_ins_1024, nuclei_binary_res)
+                        ff_tissue_loss = dice_ce_loss_b(pred_mask_sem_1024, nuclei_tissue_binary)
 
-                        ff_nuclei_loss = dice_ce_loss_b(pred_mask_ins, nuclei_binary_res)
-                        ff_tissue_loss = dice_ce_loss_b(pred_mask_sem, nuclei_tissue_binary)
+
                         log_prob1 = F.log_softmax(pred_prob_sem, dim=1)
                         prob2 = F.softmax(pred_prob_ins, dim=1)
 
@@ -151,6 +162,9 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                                                             prob_ins=pred_mask_ins, 
                                                             prob_sem=pred_mask_sem)
 
+                        pred_mask_ins_1024 = F.interpolate(pred_mask_ins, size=(1024, 1024), mode='bilinear', align_corners=False)
+                        pred_mask_sem_1024 = F.interpolate(pred_mask_sem, size=(1024, 1024), mode='bilinear', align_corners=False)
+
                         nuclei_binary_map_pred = pred_mask_ins[:,0:1,:,:]
                         nuclei_type_map_pred = pred_mask_ins[:,1:1+args.ins_cls,:,:]
                         nuclei_hv_map_pred = pred_mask_ins[:,1+args.ins_cls:3+args.ins_cls,:,:]
@@ -161,8 +175,8 @@ def train_model(model, optimizer, scheduler, num_epochs=5):
                         multi_loss = dice_ce_loss_m(nuclei_type_map_pred, nuclei_type_map)
                         score_mask_ins_b = accuracy_metric(nuclei_binary_map_pred, nuclei_binary_map)
                         score_mask_ins_m = accuracy_metric_m(nuclei_type_map_pred, nuclei_type_map)
-                        loss_sem = dice_ce_loss_m(pred_mask_sem, tissue_map)
-                        score_mask_sem = accuracy_metric_m(pred_mask_sem, tissue_map)
+                        loss_sem = dice_ce_loss_m(pred_mask_sem_1024, tissue_map)
+                        score_mask_sem = accuracy_metric_m(pred_mask_sem_1024, tissue_map)
                         score_mask_sem = torch.nan_to_num(score_mask_sem)
                         score_mask_ins_m = torch.nan_to_num(score_mask_ins_m)
 
@@ -238,20 +252,20 @@ if __name__ == '__main__':
 
     os.makedirs('outputs/', exist_ok=True)
 
-    jsonfile1 = f'datasets/{args.dataset}/data_split.json'
-    
+    jsonfile1 = 'data_split.json'    
     with open(jsonfile1, 'r') as f:
         df1 = json.load(f)
     
     val_files = df1['valid']
     train_files = df1['train']
 
+    
     train_dataset = PUMALoader(args.dataset, train_files, A.Compose([
-        A.Resize(256, 256),
+        A.Resize(1024, 1024),
         ], 
         additional_targets={'mask2': 'mask','mask3': 'mask','mask4': 'mask','mask5': 'mask'}))
     val_dataset = PUMALoader(args.dataset, val_files, A.Compose([
-        A.Resize(256, 256),
+        A.Resize(1024, 1024),
         ],
         additional_targets={'mask2': 'mask','mask3': 'mask','mask4': 'mask','mask5': 'mask'}))
     

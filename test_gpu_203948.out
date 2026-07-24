@@ -1,0 +1,30 @@
+===== CONDA ENV =====
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+coseg                *   /home/u9444861/.conda/envs/coseg
+base                     /work/envstack/apps/miniconda3/26.1.1
+
+===== PYTHON PATH =====
+/work/envstack/apps/miniconda3/26.1.1/bin/python
+===== GPU TEST =====
+Trainable Params = 22.178543M
+Total Params = 234.327839M
+Ratio = 9.464749512754222%
+Epoch 0/79
+----------
+image_id = VOL_13_slice_201
+self.jsfiles[idx] = VOL_13_slice_201.png
+self.path = datasets/puma
+image_id = VOL_13_slice_201
+mask_path = data/mask_sem_1024/VOL_13_slice_201.npy
+image_id = VOL_2_slice_245
+self.jsfiles[idx] = VOL_2_slice_245.png
+self.path = datasets/puma
+image_id = VOL_2_slice_245
+mask_path = data/mask_sem_1024/VOL_2_slice_245.npy
+Start pipeline for case: 0012203205
+
+Running: python train_puma.py

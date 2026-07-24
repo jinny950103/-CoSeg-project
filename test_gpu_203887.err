@@ -1,0 +1,41 @@
+INFO:albumentations.check_version:A new version of Albumentations is available: 2.0.8 (you have 1.4.8). Upgrade using: pip install --upgrade albumentations
+
+0it [00:00, ?it/s]
+0it [00:00, ?it/s]
+/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 302, in <module>
+    train_model(model, optimizer, exp_lr_scheduler, num_epochs=args.epoch)
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 74, in train_model
+    for data_dict in tqdm(dataloaders[phase]):
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/tqdm/std.py", line 1187, in __iter__
+    for obj in iterable:
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 725, in __next__
+    data = self._next_data()
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 785, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 54, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/u9444861/-CoSeg-project/dataloader.py", line 146, in __getitem__
+    nuclei_map = np.load(mask_path)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/site-packages/numpy/lib/_npyio_impl.py", line 451, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'dataset/mask_npy/0012203205_sample.npy'
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 25, in <module>
+    main()
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 17, in main
+    run(["python", "train_puma.py"])
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 6, in run
+    subprocess.run(cmd, check=True)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'train_puma.py']' returned non-zero exit status 1.
+ERROR conda.cli.main_run:execute(142): `conda run python run_pipeline.py` failed. (See above for error)
+ERROR conda.cli.main_run:execute(142): `conda run conda run -n coseg python run_pipeline.py` failed. (See above for error)

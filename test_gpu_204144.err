@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/train_puma.py", line 2, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 25, in <module>
+    main()
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 17, in main
+    run(["python", "train_puma.py"])
+  File "/home/u9444861/-CoSeg-project/run_pipeline.py", line 6, in run
+    subprocess.run(cmd, check=True)
+  File "/home/u9444861/.conda/envs/coseg/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'train_puma.py']' returned non-zero exit status 1.

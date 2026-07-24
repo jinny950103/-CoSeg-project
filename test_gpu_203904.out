@@ -1,0 +1,28 @@
+===== CONDA ENV =====
+
+# conda environments:
+#
+# * -> active
+# + -> frozen
+coseg                *   /home/u9444861/.conda/envs/coseg
+base                     /work/envstack/apps/miniconda3/26.1.1
+
+===== PYTHON PATH =====
+/work/envstack/apps/miniconda3/26.1.1/bin/python
+===== GPU TEST =====
+Trainable Params = 22.178543M
+Total Params = 234.327839M
+Ratio = 9.464749512754222%
+Epoch 0/79
+----------
+train Loss ALL: nan Type: nan Binary: nan MSE: nan MSGE: nan Tissue: nan
+train Tissue Stroma: nan Tumor: nan Avg: nan
+train Instance Lymphocyte: nan Tumor: nan Other: nan Binary: nan Avg: nan
+image_id = sample
+self.jsfiles[idx] = sample.png
+self.path = datasets/puma
+image_id = sample
+mask_path = data/mask_sem_1024/sample.npy
+Start pipeline for case: 0012203205
+
+Running: python train_puma.py
