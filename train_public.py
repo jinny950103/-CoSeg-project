@@ -98,7 +98,7 @@ def main():
     # 🌟 5. 換上專剋微小目標的 Loss：BCE + Dice
     criterion = DiceCELoss(include_background=True, to_onehot_y=False, softmax=False, sigmoid=True)
 
-    num_epochs = 30
+    num_epochs = 70
     best_dice = 0.0
 
     print("🚀 開始訓練下顎管分割模型 (已啟用 DiceCELoss 與多執行緒加速)...")
@@ -150,10 +150,14 @@ def main():
             
             print(f"{phase.capitalize()} Loss: {epoch_loss:.4f} | Dice: {epoch_dice:.4f}")
             
-            # 🌟 改成：只要跑完驗證，就直接強制儲存最新的權重
+            # 🌟 只有當這次的 Dice 分數打破歷史紀錄時，才存檔！
             if phase == 'val':
-                torch.save(model.state_dict(), OUTPUT_WEIGHTS)
-                print(f"💾 模型已強制更新並儲存至: {OUTPUT_WEIGHTS} (Epoch {epoch} 結算)")
+                if epoch_dice > best_dice:
+                    best_dice = epoch_dice
+                    torch.save(model.state_dict(), OUTPUT_WEIGHTS)
+                    print(f"🏆 破紀錄！最佳模型已更新並儲存 (Epoch {epoch}, Val Dice: {best_dice:.4f})")
+                else:
+                    print(f"  - 未破紀錄 (目前最佳 Val Dice: {best_dice:.4f})")
 
 if __name__ == "__main__":
     main()
