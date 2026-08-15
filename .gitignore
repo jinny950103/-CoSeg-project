@@ -2,3 +2,4 @@ dataset/
 *.pt
 *.pth
 data/public_data/nifti_original/
+additional_train_data_v2.zip
