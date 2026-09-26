@@ -25,7 +25,7 @@ from model_v6 import CoSegV6
 from sam2.build_sam import build_sam2
 
 PROJECT_ROOT = "/home/u9444861/-CoSeg-project"
-EVAL_DATA_DIR = os.path.join(PROJECT_ROOT, "data/public_data/eval")
+EVAL_DATA_DIR = os.path.join(PROJECT_ROOT, "data/hospital_data/eval")
 DEFAULT_WEIGHTS = os.path.join(PROJECT_ROOT, "outputs/coseg_v7_best.pth")
 SAM2_CHECKPOINT = "checkpoints/sam2_hiera_large.pt"
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "outputs/applications")

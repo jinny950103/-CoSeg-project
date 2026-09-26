@@ -119,6 +119,18 @@ def volume_to_stl(volume, stl_path, smooth_iterations=10):
         print(f"  ⚠️ Volume 是空的，跳過")
         return False
 
+    # z 軸插值：填滿切片間的間隙
+    from scipy.ndimage import zoom
+    # z 方向放大 3 倍，xy 不動，讓 voxel 更接近等距
+    volume = zoom(volume.astype(np.float32), (3, 1, 1), order=1)
+    volume = (volume > 0.5).astype(np.float32)
+
+    # 額外的 z 方向 morphological closing（連接相鄰切片）
+    from scipy.ndimage import binary_closing
+    struct = np.zeros((5, 3, 3), dtype=bool)
+    struct[:, 1, 1] = True  # 只在 z 方向連接
+    volume = binary_closing(volume, structure=struct, iterations=2).astype(np.float32)
+
     # padding 讓 mesh 封閉
     padded = np.pad(volume.astype(np.float32), 1, mode='constant', constant_values=0)
 
