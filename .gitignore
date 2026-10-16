@@ -8,3 +8,6 @@ data/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# local lists containing patient IDs
+*.local.txt
