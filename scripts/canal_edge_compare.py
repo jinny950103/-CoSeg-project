@@ -12,6 +12,8 @@ of 72 angles (nan where it finds nothing):
   canny     Canny edge map, first edge along each ray          (scikit-image)
   hed       HED deep edge map (BSDS500 weights)              (s9xie/hed via sniklaus/pytorch-hed)
   pidinet   PiDiNet deep edge map (BSDS500 weights)          (hellozhuo/pidinet)
+  otsu2d    Otsu per section + 2D region growing of the lumen  (Li et al. 2026 hybrid, no hand barrier)
+  otsu3d    Otsu per case + 3D region growing of the lumen     (same, 3D as in the paper)
 
 For the edge-map methods the radius is the first edge response along the ray above a threshold,
 so they all share one read-out rule. No ground truth exists, so the report gives: fraction of
@@ -210,9 +212,7 @@ def m_polardp(ctx, gcap=500.0, lam=0.3, max_jump=2):
     connected without making it round. A ray counts only if the image really rises there."""
     r, p = polar_profiles(ctx)
     dr = r[1] - r[0]
-    g = np.gradient(ndimage.gaussian_filter1d(p, 1.0, axis=1), dr, axis=1)       # intensity / mm
-    cost = -np.clip(g, 0, gcap) / gcap + lam * r[None, :] / r[-1]
-    cost[:, r < R_MIN] = 10.0
+    cost = polar_cost(r, p, gcap, lam)
     A, R = cost.shape
     c3 = np.concatenate([cost, cost, cost], 0)                                   # unwrap the circle
     acc = c3[0].copy()
@@ -231,10 +231,134 @@ def m_polardp(ctx, gcap=500.0, lam=0.3, max_jump=2):
         path[a - 1] = back[a, path[a]]
     j = path[A:2 * A]
     rad = r[j].astype(float)
-    k = max(1, int(round(0.3 / dr)))
-    rise = p[np.arange(A), np.minimum(j + k, R - 1)] - p[np.arange(A), np.maximum(j - k, 0)]
-    rad[rise < 0.5 * ctx["min_rise"]] = np.nan
+    rad[wall_rise(p, j, dr) < 0.5 * ctx["min_rise"]] = np.nan
     return rad
+
+
+def polar_cost(r, p, gcap=500.0, lam=0.3):
+    """polardp cost per (angle, radius): strong dark->bright rise is cheap, a larger radius mildly costly."""
+    dr = r[1] - r[0]
+    g = np.gradient(ndimage.gaussian_filter1d(p, 1.0, axis=-1), dr, axis=-1)    # intensity / mm
+    cost = -np.clip(g, 0, gcap) / gcap + lam * r / r[-1]
+    cost[..., r < R_MIN] = 10.0
+    return cost
+
+
+def wall_rise(p, j, dr):
+    """Intensity 0.3mm outside minus 0.3mm inside the chosen radius index j (per angle)."""
+    k = max(1, int(round(0.3 / dr)))
+    R = p.shape[-1]
+    a = np.arange(p.shape[0])
+    return p[a, np.minimum(j + k, R - 1)] - p[a, np.maximum(j - k, 0)]
+
+
+class PolarDP3D:
+    """polardp on the whole canal at once: one closed surface over all sections of a side, found as
+    a minimum closed set by max-flow (optimal surface graph search, Wu & Chen 2006 / Li et al. 2006,
+    LOGISMOS). Same cost and same angle limit as polardp; in addition the wall at a given angle may
+    move at most max_jump_sec samples between neighbouring sections (0.4mm apart). So a faint
+    section takes its wall from the faint rise that best fits its clearer neighbours. Every section
+    of the track is used (not only every --every), around the darkest-point centres smoothed along
+    the track so that centre jitter does not read as a radius change. A ray still counts only if
+    the image rises there by rise_frac * min_rise."""
+
+    def __init__(self, gcap=500.0, lam=0.3, max_jump=2, max_jump_sec=4, rise_frac=0.5, centre_sigma=2.0):
+        self.gcap, self.lam, self.max_jump, self.max_jump_sec = gcap, lam, max_jump, max_jump_sec
+        self.rise_frac, self.centre_sigma = rise_frac, centre_sigma
+        self.key = None
+
+    def prepare(self, ctx):
+        key = (ctx["cid"], ctx["side"])
+        if self.key == key:
+            return
+        v, mm, (cl, tan) = ctx["vol"], ctx["mm"], ctx["track"]
+        us, ws, cs = [], [], []
+        prev_u = None
+        for i in range(len(cl)):
+            u, w = E.plane_basis(tan[i], prev_u); prev_u = u
+            big, g = E.sample_section(v, cl[i], u, w, mm(ctx["search_mm"]), mm(PX))
+            yy, xx = np.meshgrid(g, g, indexing="ij")
+            big = np.where(np.hypot(yy, xx) <= mm(ctx["search_mm"]), ndimage.gaussian_filter(big, 2), np.inf)
+            k = np.unravel_index(np.argmin(big), big.shape)
+            us.append(u); ws.append(w); cs.append(np.array([g[k[0]], g[k[1]]]))
+        off = ndimage.gaussian_filter1d(np.array(cs), self.centre_sigma, axis=0, mode="nearest")
+        us, ws = np.array(us), np.array(ws)
+        self.centre = cl + off[:, :1] * us + off[:, 1:] * ws
+        self.u, self.w = us, ws
+        r = np.arange(0, HALF + 1e-6, 0.05)
+        d = np.cos(ANG)[None, :, None, None] * us[:, None, None] + np.sin(ANG)[None, :, None, None] * ws[:, None, None]
+        xyz = self.centre[:, None, None] + d * mm(r)[None, None, :, None]
+        p = ndimage.map_coordinates(v, xyz.reshape(-1, 3).T, order=1, mode="nearest").reshape(len(cl), N_ANG, len(r))
+        j = self.surface(polar_cost(r, p, self.gcap, self.lam))
+        rad = r[j].astype(float)
+        for i in range(len(cl)):
+            rad[i, wall_rise(p[i], j[i], r[1] - r[0]) < self.rise_frac * ctx["min_rise"]] = np.nan
+        self.rad, self.key = rad, key
+
+    def surface(self, cost):
+        """argmin over surfaces j(i, a) of sum cost(i, a, j) with |j(i,a) - j(i,a+-1)| <= max_jump
+        (angles wrap) and |j(i,a) - j(i+-1,a)| <= max_jump_sec, by s-t min cut."""
+        from scipy.sparse import csr_matrix
+        from scipy.sparse.csgraph import breadth_first_order, maximum_flow
+        I, A, R = cost.shape
+        S = 100                                                           # integer capacities
+        c = np.round(cost * S).astype(np.int64)
+        wgt = np.diff(c, axis=2, prepend=0)                               # node weight = cost step
+        nid = np.arange(I * A * R).reshape(I, A, R)
+        src, dst = I * A * R, I * A * R + 1
+        INF = 2 ** 30
+        e = [(nid[:, :, 1:], nid[:, :, :-1])]                             # column: j -> j-1
+        jj = np.arange(R)
+        for da in (1, -1):                                                # angle neighbours (wrap)
+            e.append((nid, np.roll(nid, -da, axis=1)[:, :, np.maximum(jj - self.max_jump, 0)]))
+        e.append((nid[1:], nid[:-1][:, :, np.maximum(jj - self.max_jump_sec, 0)]))   # section neighbours
+        e.append((nid[:-1], nid[1:][:, :, np.maximum(jj - self.max_jump_sec, 0)]))
+        rows = [a.ravel() for a, _ in e]; cols = [b.ravel() for _, b in e]
+        caps = [np.full(a.size, INF, np.int64) for a, _ in e]
+        wf = wgt.ravel()
+        base = nid[:, :, 0].ravel()                                       # every column starts at j=0
+        neg = np.flatnonzero(wf < 0); pos = np.flatnonzero(wf > 0)
+        rows += [np.full(base.size, src), np.full(neg.size, src), pos]
+        cols += [base, neg, np.full(pos.size, dst)]
+        caps += [np.full(base.size, INF, np.int64), -wf[neg], wf[pos]]
+        n = I * A * R + 2
+        G = csr_matrix((np.concatenate(caps).astype(np.int32), (np.concatenate(rows), np.concatenate(cols))),
+                       shape=(n, n))
+        G.sum_duplicates()
+        flow = maximum_flow(G, src, dst, method="dinic").flow
+        res = (G - flow).tocsr()
+        res.data = (res.data > 0).astype(np.int8); res.eliminate_zeros()
+        reach = np.zeros(n, bool); reach[breadth_first_order(res, src, directed=True, return_predecessors=False)] = True
+        inside = reach[:I * A * R].reshape(I, A, R)
+        return R - 1 - np.argmax(inside[:, :, ::-1], axis=2)              # top of the closed set
+
+    def __call__(self, ctx):
+        self.prepare(ctx)
+        i, c = ctx["i"], ctx["c"]
+        mm = ctx["mm"]
+        rad = self.rad[i]
+        rf = E.fill_angles(ANG, rad) if np.isfinite(rad).any() else None
+        if rf is None:
+            return np.full(N_ANG, np.nan)
+        # wall polygon in the section plane, relative to the compare centre c (same plane, other centre)
+        o = self.centre[i] - c
+        oy, ox = o @ self.u[i] * ctx["sp"], o @ self.w[i] * ctx["sp"]
+        py, px_ = oy + rf * np.cos(ANG), ox + rf * np.sin(ANG)
+        from matplotlib.path import Path as MPath
+        poly = MPath(np.c_[py, px_])
+        rr = np.arange(0, HALF, 0.025)
+        out = np.full(N_ANG, np.nan)
+        for a, t in enumerate(ANG):
+            pts = np.c_[rr * np.cos(t), rr * np.sin(t)]
+            ins = poly.contains_points(pts)
+            if not ins[0] or ins.all():
+                continue
+            k = int(np.argmin(ins))
+            hit = pts[k]
+            near = int(np.argmin(np.hypot(py - hit[0], px_ - hit[1])))
+            if np.isfinite(rad[near]):
+                out[a] = rr[k]
+        return out
 
 
 class Grad3D:
@@ -308,6 +432,43 @@ class Vesselness:
         return radii_from_mask(sec >= 0.5 * centre)
 
 
+def m_otsu2d(ctx):
+    """Otsu threshold on the section, then 2D region growing of the dark class from the centre.
+    Hybrid idea of Li et al. 2026 (Int Dent J 76:111140) turned around for a dark lumen, without
+    their hand-placed growing boundary: where the wall is missing the region leaks, and rays that
+    leave the 3mm section come out nan."""
+    from skimage.filters import threshold_otsu
+    sec = ctx["sec"]
+    return radii_from_mask(sec < threshold_otsu(sec))
+
+
+class Otsu3D:
+    """Same, but as in the paper: one Otsu threshold per case (voxels within 3mm of the doctor's
+    clicks) and 3D region growing (connected dark component) from the section centre."""
+
+    def __init__(self):
+        self.key = None
+
+    def prepare(self, ctx):
+        if self.key == ctx["cid"]:
+            return
+        from skimage.filters import threshold_otsu
+        near = ndimage.distance_transform_edt(~ctx["lab"], sampling=ctx["sp"]) <= HALF
+        self.thr = float(threshold_otsu(ctx["vol"][near]))
+        self.comp, _ = ndimage.label(ctx["vol"] < self.thr)
+        self.key = ctx["cid"]
+
+    def __call__(self, ctx):
+        self.prepare(ctx)
+        i = tuple(np.clip(np.round(ctx["c"]).astype(int), 0, np.array(self.comp.shape) - 1))
+        if self.comp[i] == 0:
+            return np.full(N_ANG, np.nan)
+        mm = ctx["mm"]
+        sec, _ = E.sample_section((self.comp == self.comp[i]).astype(np.float32), ctx["c"], ctx["u"], ctx["w"],
+                                  mm(HALF), mm(PX))
+        return radii_from_mask(sec > 0.5)
+
+
 class NNInteractive:
     """Reads a precomputed nnInteractive mask (MIC-DKFZ/nnInteractive, doctor clicks as positive
     point prompts; run separately because it needs its own environment). Not an edge detector:
@@ -361,7 +522,9 @@ def main():
 
     names = args.methods.split(",")
     fns = {"ray": m_ray, "gac": m_gac, "acwe": m_acwe, "canny": m_canny, "polardp": m_polardp,
-           "grad3d": Grad3D(), "sato": Vesselness(), "nninter": NNInteractive(args.nni_dir)}
+           "grad3d": Grad3D(), "sato": Vesselness(), "nninter": NNInteractive(args.nni_dir),
+           "otsu2d": m_otsu2d, "otsu3d": Otsu3D(), "polar3d": PolarDP3D(),
+           "polar3d_lo": PolarDP3D(rise_frac=0.25)}
     for k in ("hed", "pidinet"):
         if k in names:
             fns[k] = DeepEdge(k, args.ext)
@@ -394,7 +557,8 @@ def main():
                 k = np.unravel_index(np.argmin(big), big.shape)
                 c = c0 + g[k[0]] * u + g[k[1]] * w
                 sec, _ = E.sample_section(v, c, u, w, mm(HALF), mm(PX))
-                ctx = dict(vol=v, c=c, u=u, w=w, sp=sp, mm=mm, sec=sec, min_rise=args.min_rise, cid=cid, crop=crop)
+                ctx = dict(vol=v, c=c, u=u, w=w, sp=sp, mm=mm, sec=sec, min_rise=args.min_rise, cid=cid, crop=crop,
+                           lab=lab[crop], side=int(side), i=i, track=(cl, tan), search_mm=args.search_mm)
                 click = np.array([(c0 - c) @ u, (c0 - c) @ w]) * sp
                 rec = {"case": cid, "side": int(side), "i": i}
                 rads = {}

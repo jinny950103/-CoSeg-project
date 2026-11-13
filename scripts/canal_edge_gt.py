@@ -51,7 +51,11 @@ def click_tracks(lab, ax=1, r2=8):
     idx = np.argwhere(pts)
     other = [a for a in range(3) if a != ax]
     lat = other[int(np.argmax(idx[:, other].std(0)))]
-    mid = np.median(idx[:, lat])
+    # split left/right at the widest empty band across the midline; the median put the front end
+    # of the side with more points onto the other side, whose track then crossed the chin
+    v = np.unique(idx[:, lat])
+    gi = int(np.argmax(np.diff(v))) if len(v) > 1 else 0
+    mid = (v[gi] + v[gi + 1]) / 2 if len(v) > 1 and v[gi + 1] - v[gi] >= 10 else np.median(idx[:, lat])
     out = {}
     for side in (0, 1):
         sel = idx[(idx[:, lat] > mid) == bool(side)]
